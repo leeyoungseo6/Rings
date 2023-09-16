@@ -19,6 +19,7 @@
       </intent-filter>
       <meta-data android:name="unityplayer.UnityActivity" android:value="true" />
       <meta-data android:name="notch_support" android:value="true" />
+      <layout android:defaultWidth="1080px" android:defaultHeight="1920px" android:minWidth="1080px" android:minHeight="1920px" />
     </activity>
   </application>
 </manifest>

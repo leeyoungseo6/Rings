@@ -62,8 +62,6 @@ ScriptsOnlyBuild:
     Unity.RenderPipelines.Universal.Editor.dll:
     - UnityEditor.Rendering.Universal.UniversalProjectSettings
     Unity.RenderPipelines.Universal.Runtime.dll:
-    - UnityEngine.Rendering.Universal.Light2D
-    - UnityEngine.Rendering.Universal.PostProcessData
     - UnityEngine.Rendering.Universal.Renderer2DData
     - UnityEngine.Rendering.Universal.UniversalAdditionalCameraData
     - UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset
@@ -80,9 +78,10 @@ ScriptsOnlyBuild:
     - TMPro.TMP_FontAsset
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
-    - TMPro.TMP_StyleSheet
     Unity.TextMeshPro.dll:
     - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
     - TMPro.TextMeshProUGUI
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -115,8 +114,6 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.UI.DebugUIPrefabBundle
     Unity.RenderPipelines.Universal.Runtime:
     - UnityEngine.Rendering.Universal.Light2DBlendStyle
-    - UnityEngine.Rendering.Universal.PostProcessData/ShaderResources
-    - UnityEngine.Rendering.Universal.PostProcessData/TextureResources
     - UnityEngine.Rendering.Universal.ScriptableRendererData/DebugShaderResources
     - UnityEngine.Rendering.Universal.TemporalAA/Settings
     - UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset/TextureResources
@@ -124,16 +121,11 @@ ScriptsOnlyBuild:
     - TMPro.FaceInfo_Legacy
     - TMPro.FontAssetCreationSettings
     - TMPro.KerningTable
-    - TMPro.TMP_Character
     - TMPro.TMP_FontFeatureTable
     - TMPro.TMP_FontWeightPair
-    - TMPro.TMP_GlyphAdjustmentRecord
-    - TMPro.TMP_GlyphPairAdjustmentRecord
-    - TMPro.TMP_GlyphValueRecord
     - TMPro.TMP_Sprite
     - TMPro.TMP_SpriteCharacter
     - TMPro.TMP_SpriteGlyph
-    - TMPro.TMP_Style
     - TMPro.VertexGradient
     UnityEngine.CoreModule:
     - UnityEngine.Events.ArgumentCache
@@ -143,7 +135,6 @@ ScriptsOnlyBuild:
     - UnityEngine.RectOffset
     UnityEngine.TextCoreFontEngineModule:
     - UnityEngine.TextCore.FaceInfo
-    - UnityEngine.TextCore.Glyph
     - UnityEngine.TextCore.GlyphMetrics
     - UnityEngine.TextCore.GlyphRect
     UnityEngine.UI:
@@ -280,87 +271,83 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 19024}
     - Class: 114
-      Script: {instanceID: 19752}
+      Script: {instanceID: 19090}
     - Class: 114
-      Script: {instanceID: 19794}
+      Script: {instanceID: 19754}
     - Class: 114
-      Script: {instanceID: 19850}
+      Script: {instanceID: 19796}
     - Class: 114
-      Script: {instanceID: 19908}
+      Script: {instanceID: 19852}
     - Class: 114
-      Script: {instanceID: 20056}
+      Script: {instanceID: 19910}
     - Class: 114
-      Script: {instanceID: 20072}
+      Script: {instanceID: 20058}
     - Class: 114
-      Script: {instanceID: 20522}
+      Script: {instanceID: 20074}
     - Class: 114
-      Script: {instanceID: 20528}
+      Script: {instanceID: 20524}
     - Class: 114
-      Script: {instanceID: 20592}
+      Script: {instanceID: 20530}
     - Class: 114
-      Script: {instanceID: 20684}
+      Script: {instanceID: 20594}
     - Class: 114
-      Script: {instanceID: 20762}
+      Script: {instanceID: 20686}
     - Class: 114
-      Script: {instanceID: 21106}
+      Script: {instanceID: 20764}
     - Class: 114
-      Script: {instanceID: 21164}
+      Script: {instanceID: 21108}
     - Class: 114
-      Script: {instanceID: 21960}
+      Script: {instanceID: 21166}
     - Class: 114
-      Script: {instanceID: 22830}
+      Script: {instanceID: 21962}
     - Class: 114
-      Script: {instanceID: 22892}
+      Script: {instanceID: 22894}
     - Class: 114
-      Script: {instanceID: 23022}
+      Script: {instanceID: 23024}
     - Class: 114
-      Script: {instanceID: 23190}
+      Script: {instanceID: 23192}
     - Class: 114
-      Script: {instanceID: 23364}
+      Script: {instanceID: 23366}
     - Class: 114
-      Script: {instanceID: 23702}
+      Script: {instanceID: 23704}
     - Class: 114
-      Script: {instanceID: 23994}
+      Script: {instanceID: 23996}
     - Class: 114
-      Script: {instanceID: 24060}
+      Script: {instanceID: 24062}
     - Class: 114
-      Script: {instanceID: 24292}
+      Script: {instanceID: 24294}
     - Class: 114
-      Script: {instanceID: 24380}
+      Script: {instanceID: 24382}
     - Class: 114
-      Script: {instanceID: 24622}
+      Script: {instanceID: 24624}
     - Class: 114
-      Script: {instanceID: 24694}
+      Script: {instanceID: 24696}
     - Class: 114
-      Script: {instanceID: 25238}
+      Script: {instanceID: 25294}
     - Class: 114
-      Script: {instanceID: 25292}
+      Script: {instanceID: 25340}
     - Class: 114
-      Script: {instanceID: 25338}
+      Script: {instanceID: 25520}
     - Class: 114
-      Script: {instanceID: 25518}
+      Script: {instanceID: 25768}
     - Class: 114
-      Script: {instanceID: 25766}
+      Script: {instanceID: 26056}
     - Class: 114
-      Script: {instanceID: 26054}
+      Script: {instanceID: 26176}
     - Class: 114
-      Script: {instanceID: 26174}
+      Script: {instanceID: 26248}
     - Class: 114
-      Script: {instanceID: 26246}
+      Script: {instanceID: 26258}
     - Class: 114
-      Script: {instanceID: 26256}
+      Script: {instanceID: 26338}
     - Class: 114
-      Script: {instanceID: 26336}
+      Script: {instanceID: 26444}
     - Class: 114
-      Script: {instanceID: 26442}
+      Script: {instanceID: 26588}
     - Class: 114
-      Script: {instanceID: 26586}
+      Script: {instanceID: 26846}
     - Class: 114
-      Script: {instanceID: 26844}
-    - Class: 114
-      Script: {instanceID: 27588}
-    - Class: 114
-      Script: {instanceID: 27830}
+      Script: {instanceID: 27590}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -746,6 +733,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.RenderPipelines.Universal.Runtime
     namespaceName: UnityEngine.Rendering.Universal
     className: Bloom
+  - hash:
+      serializedVersion: 2
+      Hash: 038c3251c271db30ec5f7876eea51522
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: CircleController
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -1880,12 +1873,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 038c3251c271db30ec5f7876eea51522
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: CircleController
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity

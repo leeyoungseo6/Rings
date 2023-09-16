@@ -74,6 +74,12 @@
             <meta-data
                 android:name="notch_support"
                 android:value="true" />
+
+            <layout
+                android:defaultHeight="1920px"
+                android:defaultWidth="1080px"
+                android:minHeight="1920px"
+                android:minWidth="1080px" />
         </activity>
     </application>
 
