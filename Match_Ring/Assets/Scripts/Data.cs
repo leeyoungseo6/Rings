@@ -1,6 +1,7 @@
-using UnityEngine;
+using System;
 
-public class Data : MonoBehaviour
+[Serializable]
+public class Data
 {
     public int TopScore;
 }

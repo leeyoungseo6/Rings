@@ -152,15 +152,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Toggle/ToggleEvent
   methodsToPreserve:
   - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.Behaviour
-    methodName: set_enabled
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.Behaviour
     methodName: set_enabled
   - assembly: UnityEngine.CoreModule
@@ -170,17 +161,29 @@ ScriptsOnlyBuild:
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
   - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.Behaviour
     methodName: set_enabled
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
   - assembly: Assembly-CSharp
     fullTypeName: CircleController
     methodName: Restart
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.Behaviour
+    methodName: set_enabled
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: Unity.RenderPipelines.Core.Runtime
     fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerPanel
     methodName: OnScrollbarClicked
@@ -237,6 +240,10 @@ ScriptsOnlyBuild:
     - Class: 49
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -319,35 +326,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 24382}
     - Class: 114
-      Script: {instanceID: 24624}
+      Script: {instanceID: 24626}
     - Class: 114
-      Script: {instanceID: 24696}
+      Script: {instanceID: 24698}
     - Class: 114
-      Script: {instanceID: 25294}
+      Script: {instanceID: 25296}
     - Class: 114
-      Script: {instanceID: 25340}
+      Script: {instanceID: 25342}
     - Class: 114
-      Script: {instanceID: 25520}
+      Script: {instanceID: 25522}
     - Class: 114
-      Script: {instanceID: 25768}
+      Script: {instanceID: 25770}
     - Class: 114
-      Script: {instanceID: 26056}
+      Script: {instanceID: 26058}
     - Class: 114
-      Script: {instanceID: 26176}
+      Script: {instanceID: 26178}
     - Class: 114
-      Script: {instanceID: 26248}
+      Script: {instanceID: 26250}
     - Class: 114
-      Script: {instanceID: 26258}
+      Script: {instanceID: 26260}
     - Class: 114
-      Script: {instanceID: 26338}
+      Script: {instanceID: 26340}
     - Class: 114
-      Script: {instanceID: 26444}
+      Script: {instanceID: 26446}
     - Class: 114
-      Script: {instanceID: 26588}
+      Script: {instanceID: 26590}
     - Class: 114
-      Script: {instanceID: 26846}
+      Script: {instanceID: 26848}
     - Class: 114
-      Script: {instanceID: 27590}
+      Script: {instanceID: 27594}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -365,6 +372,12 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 241
+      Script: {instanceID: 0}
+    - Class: 243
+      Script: {instanceID: 0}
+    - Class: 245
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -735,7 +748,7 @@ ScriptsOnlyBuild:
     className: Bloom
   - hash:
       serializedVersion: 2
-      Hash: 038c3251c271db30ec5f7876eea51522
+      Hash: c9d3df7f599e227aa2c20ad782b89b20
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: CircleController
@@ -1849,6 +1862,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnMouseUpMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 4656836f88b77a77a59f69f1925b9c15
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: DataManager
   - hash:
       serializedVersion: 2
       Hash: 116a5d45ac93b8a51d0a895f4b9c4df2
