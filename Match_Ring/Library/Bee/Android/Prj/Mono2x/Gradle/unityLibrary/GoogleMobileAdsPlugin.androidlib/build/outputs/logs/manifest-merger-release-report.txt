@@ -1,0 +1,37 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml:7:1-14:12
+INJECTED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml:7:1-14:12
+INJECTED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml:7:1-14:12
+	package
+		ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml:8:5-35
+		INJECTED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml
+		INJECTED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml
+	android:versionName
+		ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml:9:5-30
+	xmlns:android
+		ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml:7:11-69
+	android:versionCode
+		ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml:10:5-28
+application
+ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml:11:3-13:17
+uses-library#org.apache.http.legacy
+ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml:12:5-83
+	android:required
+		ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml:12:19-43
+	android:name
+		ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml:12:44-81
+uses-sdk
+INJECTED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml
+INJECTED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml
+INJECTED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml
+INJECTED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml
+		ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml
+		INJECTED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml
+		ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml
+		INJECTED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml

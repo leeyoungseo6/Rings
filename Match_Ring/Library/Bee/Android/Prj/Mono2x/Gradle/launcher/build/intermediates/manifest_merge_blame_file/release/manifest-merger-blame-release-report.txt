@@ -1,6 +1,6 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="com.DefaultCompany.Match_Ring"
+3    package="com.Luca3.Rings"
 4    android:installLocation="preferExternal"
 5    android:versionCode="1"
 6    android:versionName="1.0" >
@@ -79,11 +79,11 @@
 45            android:value="True" />
 45-->[:unityLibrary] D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:33:13-33
 46        <meta-data
-46-->[:unityLibrary] D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:34:9-36:37
+46-->[:unityLibrary] D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:34:9-36:36
 47            android:name="unity.allow-resizable-window"
 47-->[:unityLibrary] D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:35:13-56
-48            android:value="False" />
-48-->[:unityLibrary] D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:36:13-34
+48            android:value="True" />
+48-->[:unityLibrary] D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:36:13-33
 49        <meta-data
 49-->[:unityLibrary] D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:37:9-39:50
 50            android:name="notch.config"
@@ -109,8 +109,8 @@
 60-->[:unityLibrary] D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:48:13-48
 61            android:launchMode="singleTask"
 61-->[:unityLibrary] D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:49:13-44
-62            android:resizeableActivity="false"
-62-->[:unityLibrary] D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:50:13-47
+62            android:resizeableActivity="true"
+62-->[:unityLibrary] D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:50:13-46
 63            android:screenOrientation="fullUser"
 63-->[:unityLibrary] D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:51:13-49
 64            android:theme="@style/UnityThemeSelector" >
@@ -133,22 +133,23 @@
 73                android:value="true" />
 73-->[:unityLibrary] D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:61:17-37
 74            <meta-data
-74-->[:unityLibrary] D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:62:13-64:40
-75                android:name="notch_support"
-75-->[:unityLibrary] D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:63:17-45
-76                android:value="true" />
-76-->[:unityLibrary] D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:64:17-37
-77
-78            <layout
-78-->[:unityLibrary] D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:66:13-70:45
-79                android:defaultHeight="1920px"
-79-->[:unityLibrary] D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:67:17-47
-80                android:defaultWidth="1080px"
-80-->[:unityLibrary] D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:68:17-46
-81                android:minHeight="1920px"
-81-->[:unityLibrary] D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:69:17-43
-82                android:minWidth="1080px" />
-82-->[:unityLibrary] D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:70:17-42
+74-->[:unityLibrary] D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:62:13-64:71
+75                android:name="WindowManagerPreference:FreeformWindowSize"
+75-->[:unityLibrary] D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:63:17-74
+76                android:value="@string/FreeformWindowSize_maximize" />
+76-->[:unityLibrary] D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:64:17-68
+77            <meta-data
+77-->[:unityLibrary] D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:65:13-67:79
+78                android:name="WindowManagerPreference:FreeformWindowOrientation"
+78-->[:unityLibrary] D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:66:17-81
+79                android:value="@string/FreeformWindowOrientation_landscape" />
+79-->[:unityLibrary] D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:67:17-76
+80            <meta-data
+80-->[:unityLibrary] D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:68:13-70:40
+81                android:name="notch_support"
+81-->[:unityLibrary] D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:69:17-45
+82                android:value="true" />
+82-->[:unityLibrary] D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\release\AndroidManifest.xml:70:17-37
 83        </activity>
 84    </application>
 85

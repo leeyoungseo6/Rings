@@ -2,10 +2,10 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - CircleController
+    - ScreenManager
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Animation.Runtime.dll:
-    - UnityEngine.U2D.Animation.BufferManager
     - UnityEngine.U2D.Animation.SpriteSkinComposite
     - UnityEngine.U2D.Animation.SpriteSkinUpdateHelper
     Unity.2D.IK.Editor.dll:
@@ -71,9 +71,7 @@ ScriptsOnlyBuild:
     - Packages.Rider.Editor.RiderScriptEditorPersistedState
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.ShaderGraph.Editor.dll:
-    - UnityEditor.Graphing.GraphObject
     - UnityEditor.ShaderGraph.Drawing.MaterialGraphEditWindow
-    - UnityEditor.ShaderGraph.ShaderGraphProjectSettings
     Unity.TextMeshPro:
     - TMPro.TMP_FontAsset
     - TMPro.TMP_Settings
@@ -266,95 +264,97 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 17300}
     - Class: 114
-      Script: {instanceID: 17512}
+      Script: {instanceID: 17302}
     - Class: 114
-      Script: {instanceID: 17860}
+      Script: {instanceID: 17520}
     - Class: 114
-      Script: {instanceID: 18290}
+      Script: {instanceID: 17868}
     - Class: 114
-      Script: {instanceID: 18358}
+      Script: {instanceID: 18302}
     - Class: 114
-      Script: {instanceID: 18494}
+      Script: {instanceID: 18372}
     - Class: 114
-      Script: {instanceID: 19024}
+      Script: {instanceID: 18508}
     - Class: 114
-      Script: {instanceID: 19090}
+      Script: {instanceID: 19044}
     - Class: 114
-      Script: {instanceID: 19754}
+      Script: {instanceID: 19110}
     - Class: 114
-      Script: {instanceID: 19796}
+      Script: {instanceID: 19782}
     - Class: 114
-      Script: {instanceID: 19852}
+      Script: {instanceID: 19824}
     - Class: 114
-      Script: {instanceID: 19910}
+      Script: {instanceID: 19880}
     - Class: 114
-      Script: {instanceID: 20058}
+      Script: {instanceID: 19938}
     - Class: 114
-      Script: {instanceID: 20074}
+      Script: {instanceID: 20088}
     - Class: 114
-      Script: {instanceID: 20524}
+      Script: {instanceID: 20104}
     - Class: 114
-      Script: {instanceID: 20530}
+      Script: {instanceID: 20560}
     - Class: 114
-      Script: {instanceID: 20594}
+      Script: {instanceID: 20566}
     - Class: 114
-      Script: {instanceID: 20686}
+      Script: {instanceID: 20630}
     - Class: 114
-      Script: {instanceID: 20764}
+      Script: {instanceID: 20726}
     - Class: 114
-      Script: {instanceID: 21108}
+      Script: {instanceID: 20804}
     - Class: 114
-      Script: {instanceID: 21166}
+      Script: {instanceID: 21158}
     - Class: 114
-      Script: {instanceID: 21962}
+      Script: {instanceID: 21216}
     - Class: 114
-      Script: {instanceID: 22894}
+      Script: {instanceID: 22026}
     - Class: 114
-      Script: {instanceID: 23024}
+      Script: {instanceID: 22970}
     - Class: 114
-      Script: {instanceID: 23192}
+      Script: {instanceID: 23100}
     - Class: 114
-      Script: {instanceID: 23366}
+      Script: {instanceID: 23268}
     - Class: 114
-      Script: {instanceID: 23704}
+      Script: {instanceID: 23442}
     - Class: 114
-      Script: {instanceID: 23996}
+      Script: {instanceID: 23782}
     - Class: 114
-      Script: {instanceID: 24062}
+      Script: {instanceID: 24080}
     - Class: 114
-      Script: {instanceID: 24294}
+      Script: {instanceID: 24148}
     - Class: 114
-      Script: {instanceID: 24382}
+      Script: {instanceID: 24380}
     - Class: 114
-      Script: {instanceID: 24626}
+      Script: {instanceID: 24468}
     - Class: 114
-      Script: {instanceID: 24698}
+      Script: {instanceID: 24716}
     - Class: 114
-      Script: {instanceID: 25296}
+      Script: {instanceID: 24788}
     - Class: 114
-      Script: {instanceID: 25342}
+      Script: {instanceID: 25388}
     - Class: 114
-      Script: {instanceID: 25522}
+      Script: {instanceID: 25434}
     - Class: 114
-      Script: {instanceID: 25770}
+      Script: {instanceID: 25614}
     - Class: 114
-      Script: {instanceID: 26058}
+      Script: {instanceID: 25868}
     - Class: 114
-      Script: {instanceID: 26178}
+      Script: {instanceID: 26160}
     - Class: 114
-      Script: {instanceID: 26250}
+      Script: {instanceID: 26280}
     - Class: 114
-      Script: {instanceID: 26260}
+      Script: {instanceID: 26352}
     - Class: 114
-      Script: {instanceID: 26340}
+      Script: {instanceID: 26362}
     - Class: 114
-      Script: {instanceID: 26446}
+      Script: {instanceID: 26442}
     - Class: 114
-      Script: {instanceID: 26590}
+      Script: {instanceID: 26548}
     - Class: 114
-      Script: {instanceID: 26848}
+      Script: {instanceID: 26692}
     - Class: 114
-      Script: {instanceID: 27594}
+      Script: {instanceID: 26952}
+    - Class: 114
+      Script: {instanceID: 27704}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -476,6 +476,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.RenderPipelines.Universal.Runtime
     namespaceName: UnityEngine.Rendering.Universal
     className: WhiteBalance
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ScreenManager
   - hash:
       serializedVersion: 2
       Hash: a8b7fd1da21541aeec7d0fde1c075720
@@ -1896,4 +1902,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
   playerPath: "C:/Users/user/Desktop/\uD504\uB85C\uC81D\uD2B8/\uAC20\uD504/Match
-    Ring/Match Ring.apk"
+    Ring/Rings.apk"

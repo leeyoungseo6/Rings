@@ -46,14 +46,14 @@ public class CircleController : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
-            float scale = Mathf.Clamp(-3 + ((Vector2)_mainCam.ScreenToWorldPoint(Input.mousePosition)).magnitude * 2, 1.25f, 5);
+            float scale = Mathf.Clamp(-3.5f + ((Vector2)_mainCam.ScreenToWorldPoint(Input.mousePosition)).magnitude * 2.5f, 1.25f, 5);
             transform.localScale = new Vector3(scale, scale, 1);
         }
     }
 
     private void CheckCircle()
     {
-        if (Mathf.Abs(_ringTrm.localScale.x - transform.localScale.x) < 0.15f)
+        if (Mathf.Abs(_ringTrm.localScale.x - transform.localScale.x) < 0.2f)
         {
             _currentTime += Time.deltaTime;
             if (_currentTime > 0.1f)
@@ -91,7 +91,7 @@ public class CircleController : MonoBehaviour
     {
         float currentTime = 0;
         float percent = 0;
-        float time = Mathf.Clamp(10 - float.Parse(_scoreText.text) / 25, 1.75f, 10);
+        float time = Mathf.Clamp(10 - float.Parse(_scoreText.text) / 20, 1.9f, 10);
         while (percent < 1)
         {
             currentTime += Time.deltaTime;
@@ -117,7 +117,7 @@ public class CircleController : MonoBehaviour
     private IEnumerator RedRing()
     {
         _isRedRing = true;
-        _ringRenderer.color = new Color(0.6f, 0.1f, 0.1f, 1);
+        _ringRenderer.color = new Color(0.5f, 0.2f, 0.2f, 1);
         yield return new WaitForSeconds(Random.Range(0.5f, 1.5f));
         _ringRenderer.color = _ringColor;
         _isRedRing = false;

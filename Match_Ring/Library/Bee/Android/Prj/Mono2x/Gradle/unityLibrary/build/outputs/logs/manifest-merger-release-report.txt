@@ -1,8 +1,8 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:2:1-25:12
-INJECTED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:2:1-25:12
-INJECTED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:2:1-25:12
+ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:2:1-26:12
 	package
 		ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:2:70-98
 		INJECTED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml
@@ -40,7 +40,7 @@ ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mon
 	android:name
 		ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:7:17-80
 application
-ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:8:3-24:17
+ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:8:3-25:17
 	android:extractNativeLibs
 		ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:8:16-48
 meta-data#unity.splash-mode
@@ -62,9 +62,9 @@ ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mon
 	android:name
 		ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:11:16-54
 meta-data#unity.allow-resizable-window
-ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:12:5-84
+ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:12:5-83
 	android:value
-		ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:12:60-81
+		ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:12:60-80
 	android:name
 		ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:12:16-59
 meta-data#notch.config
@@ -80,17 +80,17 @@ ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mon
 	android:name
 		ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:14:16-60
 activity#com.unity3d.player.UnityPlayerActivity
-ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:15:5-23:16
+ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:15:5-24:16
 	android:screenOrientation
 		ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:15:111-147
 	android:launchMode
 		ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:15:148-179
 	android:hardwareAccelerated
-		ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:15:397-432
+		ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:15:396-431
 	android:exported
-		ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:15:433-456
+		ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:15:432-455
 	android:resizeableActivity
-		ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:15:362-396
+		ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:15:362-395
 	android:configChanges
 		ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:15:180-361
 	android:theme
@@ -113,22 +113,24 @@ ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mon
 		ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:20:59-79
 	android:name
 		ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:20:18-58
-meta-data#notch_support
-ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:21:7-70
+meta-data#WindowManagerPreference:FreeformWindowSize
+ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:21:7-130
 	android:value
-		ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:21:47-67
+		ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:21:76-127
 	android:name
-		ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:21:18-46
-layout
-ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:22:7-131
-	android:minWidth
-		ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:22:76-101
-	android:minHeight
-		ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:22:102-128
-	android:defaultHeight
-		ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:22:45-75
-	android:defaultWidth
-		ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:22:15-44
+		ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:21:18-75
+meta-data#WindowManagerPreference:FreeformWindowOrientation
+ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:22:7-145
+	android:value
+		ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:22:83-142
+	android:name
+		ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:22:18-82
+meta-data#notch_support
+ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:23:7-70
+	android:value
+		ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:23:47-67
+	android:name
+		ADDED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:23:18-46
 uses-sdk
 INJECTED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml

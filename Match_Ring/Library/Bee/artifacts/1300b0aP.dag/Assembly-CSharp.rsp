@@ -327,6 +327,7 @@
 "Assets/Scripts/CircleController.cs"
 "Assets/Scripts/Data.cs"
 "Assets/Scripts/DataManager.cs"
+"Assets/Scripts/ScreenManager.cs"
 -langversion:9.0
 
 /deterministic

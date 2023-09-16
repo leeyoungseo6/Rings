@@ -1,0 +1,28 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<!--
+3This Google Mobile Ads plugin library manifest will get merged with your
+4application's manifest, adding the necessary metadata
+5required for displaying ads.
+6-->
+7<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+8    package="com.google.unity.ads"
+9    android:versionCode="1"
+10    android:versionName="1.0" >
+11
+12    <uses-sdk
+13        android:minSdkVersion="1"
+13-->D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml
+14        android:targetSdkVersion="31" />
+14-->D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml
+15
+16    <application>
+16-->D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml:11:3-13:17
+17        <uses-library
+17-->D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml:12:5-83
+18            android:name="org.apache.http.legacy"
+18-->D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml:12:44-81
+19            android:required="false" />
+19-->D:\Unity\FirstGrade\Match_Ring\Match_Ring\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\AndroidManifest.xml:12:19-43
+20    </application>
+21
+22</manifest>
