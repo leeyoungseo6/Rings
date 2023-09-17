@@ -21,6 +21,7 @@ public class CircleController : MonoBehaviour
 
     public UnityEvent OnGameOver;
     public UnityEvent OnStart;
+    private float _startTime;
 
     [SerializeField] private AudioSource _audioSource;
     
@@ -46,7 +47,7 @@ public class CircleController : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
-            float scale = Mathf.Clamp(-3.5f + ((Vector2)_mainCam.ScreenToWorldPoint(Input.mousePosition)).magnitude * 2.5f, 1.25f, 5);
+            float scale = Mathf.Clamp(-3.5f + ((Vector2)_mainCam.ScreenToWorldPoint(Input.mousePosition)).magnitude * 2.5f, 1.5f, 5.5f);
             transform.localScale = new Vector3(scale, scale, 1);
         }
     }
@@ -78,12 +79,12 @@ public class CircleController : MonoBehaviour
     private void RandomScalingRing()
     {
         float rand;
-        do rand = Random.Range(1.25f, 4.9f);
+        do rand = Random.Range(1.5f, 5.4f);
         while (Mathf.Abs(rand - _ringTrm.localScale.x) < 1);
         _ringTrm.localScale = new Vector3(rand, rand, 1);
 
         int random = Random.Range(0, 5);
-        if (random == 1) StartCoroutine(RedRing());
+        if (random == 0) StartCoroutine(RedRing());
         else _ringRenderer.color = _ringColor;
     }
 
@@ -91,7 +92,7 @@ public class CircleController : MonoBehaviour
     {
         float currentTime = 0;
         float percent = 0;
-        float time = Mathf.Clamp(10 - float.Parse(_scoreText.text) / 20, 1.9f, 10);
+        float time = Mathf.Clamp(5 - (Time.time - _startTime) / 20, 1f, 10);
         while (percent < 1)
         {
             currentTime += Time.deltaTime;
@@ -104,7 +105,7 @@ public class CircleController : MonoBehaviour
 
     private void SetScore()
     {
-        int score = int.Parse(_scoreText.text) + 1;
+        var score = int.Parse(_scoreText.text) + 1;
         _scoreText.text = score.ToString();
 
         if (score > DataManager.Instance.data.TopScore)
@@ -118,7 +119,7 @@ public class CircleController : MonoBehaviour
     {
         _isRedRing = true;
         _ringRenderer.color = new Color(0.5f, 0.2f, 0.2f, 1);
-        yield return new WaitForSeconds(Random.Range(0.5f, 1.5f));
+        yield return new WaitForSeconds(Mathf.Clamp(Random.Range(0.6f, 1.1f) - float.Parse(_scoreText.text) / 300, 0.5f, 1));
         _ringRenderer.color = _ringColor;
         _isRedRing = false;
     }
@@ -136,11 +137,12 @@ public class CircleController : MonoBehaviour
 
     private void Init()
     {
+        _startTime = Time.time;
         StopCoroutine(nameof(DrainAmount));
         _isRedRing = false;
         _mainCam.backgroundColor = new Color(Random.Range(0.85f, 0.9f), Random.Range(0.85f, 0.9f), Random.Range(0.85f, 0.9f));
-        transform.localScale = new Vector3(1.25f, 1.25f, 1);
-        _ringTrm.localScale = new Vector3(4, 4, 1);
+        transform.localScale = new Vector3(1.5f, 1.5f, 1);
+        _ringTrm.localScale = new Vector3(5, 5, 1);
         _ringColor = _mainCam.backgroundColor - new Color(0.5f, 0.5f, 0.5f, 0);
         _material.SetFloat(_fillAmountHash, 1);
         _ringRenderer.color = _ringColor;
