@@ -56,6 +56,9 @@ QualitySettings:
     terrainMaxTrees: 50
     excludedTargetPlatforms:
     - Android
+    - Standalone
+    - Server
+    - iPhone
   - serializedVersion: 3
     name: Low
     pixelLightCount: 0
@@ -106,6 +109,9 @@ QualitySettings:
     terrainMaxTrees: 50
     excludedTargetPlatforms:
     - Android
+    - Standalone
+    - Server
+    - iPhone
   - serializedVersion: 3
     name: Medium
     pixelLightCount: 1
@@ -154,7 +160,10 @@ QualitySettings:
     terrainBillboardStart: 50
     terrainFadeLength: 5
     terrainMaxTrees: 50
-    excludedTargetPlatforms: []
+    excludedTargetPlatforms:
+    - Standalone
+    - Server
+    - iPhone
   - serializedVersion: 3
     name: High
     pixelLightCount: 2
@@ -205,6 +214,9 @@ QualitySettings:
     terrainMaxTrees: 50
     excludedTargetPlatforms:
     - Android
+    - Standalone
+    - Server
+    - iPhone
   - serializedVersion: 3
     name: Very High
     pixelLightCount: 3
@@ -255,6 +267,9 @@ QualitySettings:
     terrainMaxTrees: 50
     excludedTargetPlatforms:
     - Android
+    - Standalone
+    - Server
+    - iPhone
   - serializedVersion: 3
     name: Ultra
     pixelLightCount: 4
@@ -305,6 +320,8 @@ QualitySettings:
     terrainMaxTrees: 50
     excludedTargetPlatforms:
     - Android
+    - Server
+    - iPhone
   m_TextureMipmapLimitGroupNames: []
   m_PerPlatformDefaultQuality:
     Android: 2

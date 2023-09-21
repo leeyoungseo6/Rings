@@ -382,7 +382,28 @@
         374,
         375,
         376,
-        377
+        377,
+        378,
+        379,
+        380,
+        381,
+        382,
+        383,
+        384,
+        385,
+        386,
+        387,
+        388,
+        389,
+        390,
+        391,
+        392,
+        393,
+        394,
+        395,
+        396,
+        397,
+        398
       ],
       "OverwriteOutputs": false,
       "DebugActionIndex": 0
@@ -9744,7 +9765,7 @@
       "DisplayName": "Copying app_icon.png",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/AndroidPlayer/Apk/res/mipmap-mdpi/app_icon.png"
+        "Temp/StagingArea/res.mdpi.app_icon.png"
       ],
       "Outputs": [
         "D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-mdpi/app_icon.png"
@@ -9756,7 +9777,7 @@
       "DisplayName": "Copying ic_launcher_background.png",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/AndroidPlayer/Apk/res/mipmap-mdpi/ic_launcher_background.png"
+        "Temp/StagingArea/res.mdpi.adaptive_icon-0.png"
       ],
       "Outputs": [
         "D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-mdpi/ic_launcher_background.png"
@@ -9768,12 +9789,264 @@
       "DisplayName": "Copying ic_launcher_foreground.png",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/AndroidPlayer/Apk/res/mipmap-mdpi/ic_launcher_foreground.png"
+        "Temp/StagingArea/res.mdpi.adaptive_icon-1.png"
       ],
       "Outputs": [
         "D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-mdpi/ic_launcher_foreground.png"
       ],
       "DebugActionIndex": 362
+    },
+    {
+      "Annotation": "CopyFiles D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-ldpi/app_icon.png",
+      "DisplayName": "Copying app_icon.png",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "Temp/StagingArea/res.ldpi.app_icon.png"
+      ],
+      "Outputs": [
+        "D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-ldpi/app_icon.png"
+      ],
+      "DebugActionIndex": 363
+    },
+    {
+      "Annotation": "CopyFiles D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-hdpi/app_icon.png",
+      "DisplayName": "Copying app_icon.png",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "Temp/StagingArea/res.hdpi.app_icon.png"
+      ],
+      "Outputs": [
+        "D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-hdpi/app_icon.png"
+      ],
+      "DebugActionIndex": 364
+    },
+    {
+      "Annotation": "CopyFiles D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-xhdpi/app_icon.png",
+      "DisplayName": "Copying app_icon.png",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "Temp/StagingArea/res.xhdpi.app_icon.png"
+      ],
+      "Outputs": [
+        "D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-xhdpi/app_icon.png"
+      ],
+      "DebugActionIndex": 365
+    },
+    {
+      "Annotation": "CopyFiles D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-xxhdpi/app_icon.png",
+      "DisplayName": "Copying app_icon.png",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "Temp/StagingArea/res.xxhdpi.app_icon.png"
+      ],
+      "Outputs": [
+        "D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-xxhdpi/app_icon.png"
+      ],
+      "DebugActionIndex": 366
+    },
+    {
+      "Annotation": "CopyFiles D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-xxxhdpi/app_icon.png",
+      "DisplayName": "Copying app_icon.png",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "Temp/StagingArea/res.xxxhdpi.app_icon.png"
+      ],
+      "Outputs": [
+        "D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-xxxhdpi/app_icon.png"
+      ],
+      "DebugActionIndex": 367
+    },
+    {
+      "Annotation": "CopyFiles D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-ldpi/app_icon_round.png",
+      "DisplayName": "Copying app_icon_round.png",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "Temp/StagingArea/res.ldpi.app_icon_round.png"
+      ],
+      "Outputs": [
+        "D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-ldpi/app_icon_round.png"
+      ],
+      "DebugActionIndex": 368
+    },
+    {
+      "Annotation": "CopyFiles D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-mdpi/app_icon_round.png",
+      "DisplayName": "Copying app_icon_round.png",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "Temp/StagingArea/res.mdpi.app_icon_round.png"
+      ],
+      "Outputs": [
+        "D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-mdpi/app_icon_round.png"
+      ],
+      "DebugActionIndex": 369
+    },
+    {
+      "Annotation": "CopyFiles D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-hdpi/app_icon_round.png",
+      "DisplayName": "Copying app_icon_round.png",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "Temp/StagingArea/res.hdpi.app_icon_round.png"
+      ],
+      "Outputs": [
+        "D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-hdpi/app_icon_round.png"
+      ],
+      "DebugActionIndex": 370
+    },
+    {
+      "Annotation": "CopyFiles D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-xhdpi/app_icon_round.png",
+      "DisplayName": "Copying app_icon_round.png",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "Temp/StagingArea/res.xhdpi.app_icon_round.png"
+      ],
+      "Outputs": [
+        "D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-xhdpi/app_icon_round.png"
+      ],
+      "DebugActionIndex": 371
+    },
+    {
+      "Annotation": "CopyFiles D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-xxhdpi/app_icon_round.png",
+      "DisplayName": "Copying app_icon_round.png",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "Temp/StagingArea/res.xxhdpi.app_icon_round.png"
+      ],
+      "Outputs": [
+        "D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-xxhdpi/app_icon_round.png"
+      ],
+      "DebugActionIndex": 372
+    },
+    {
+      "Annotation": "CopyFiles D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-xxxhdpi/app_icon_round.png",
+      "DisplayName": "Copying app_icon_round.png",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "Temp/StagingArea/res.xxxhdpi.app_icon_round.png"
+      ],
+      "Outputs": [
+        "D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-xxxhdpi/app_icon_round.png"
+      ],
+      "DebugActionIndex": 373
+    },
+    {
+      "Annotation": "CopyFiles D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-ldpi/ic_launcher_background.png",
+      "DisplayName": "Copying ic_launcher_background.png",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "Temp/StagingArea/res.ldpi.adaptive_icon-0.png"
+      ],
+      "Outputs": [
+        "D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-ldpi/ic_launcher_background.png"
+      ],
+      "DebugActionIndex": 374
+    },
+    {
+      "Annotation": "CopyFiles D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-hdpi/ic_launcher_background.png",
+      "DisplayName": "Copying ic_launcher_background.png",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "Temp/StagingArea/res.hdpi.adaptive_icon-0.png"
+      ],
+      "Outputs": [
+        "D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-hdpi/ic_launcher_background.png"
+      ],
+      "DebugActionIndex": 375
+    },
+    {
+      "Annotation": "CopyFiles D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-xhdpi/ic_launcher_background.png",
+      "DisplayName": "Copying ic_launcher_background.png",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "Temp/StagingArea/res.xhdpi.adaptive_icon-0.png"
+      ],
+      "Outputs": [
+        "D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-xhdpi/ic_launcher_background.png"
+      ],
+      "DebugActionIndex": 376
+    },
+    {
+      "Annotation": "CopyFiles D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-xxhdpi/ic_launcher_background.png",
+      "DisplayName": "Copying ic_launcher_background.png",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "Temp/StagingArea/res.xxhdpi.adaptive_icon-0.png"
+      ],
+      "Outputs": [
+        "D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-xxhdpi/ic_launcher_background.png"
+      ],
+      "DebugActionIndex": 377
+    },
+    {
+      "Annotation": "CopyFiles D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-xxxhdpi/ic_launcher_background.png",
+      "DisplayName": "Copying ic_launcher_background.png",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "Temp/StagingArea/res.xxxhdpi.adaptive_icon-0.png"
+      ],
+      "Outputs": [
+        "D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-xxxhdpi/ic_launcher_background.png"
+      ],
+      "DebugActionIndex": 378
+    },
+    {
+      "Annotation": "CopyFiles D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-ldpi/ic_launcher_foreground.png",
+      "DisplayName": "Copying ic_launcher_foreground.png",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "Temp/StagingArea/res.ldpi.adaptive_icon-1.png"
+      ],
+      "Outputs": [
+        "D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-ldpi/ic_launcher_foreground.png"
+      ],
+      "DebugActionIndex": 379
+    },
+    {
+      "Annotation": "CopyFiles D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-hdpi/ic_launcher_foreground.png",
+      "DisplayName": "Copying ic_launcher_foreground.png",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "Temp/StagingArea/res.hdpi.adaptive_icon-1.png"
+      ],
+      "Outputs": [
+        "D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-hdpi/ic_launcher_foreground.png"
+      ],
+      "DebugActionIndex": 380
+    },
+    {
+      "Annotation": "CopyFiles D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png",
+      "DisplayName": "Copying ic_launcher_foreground.png",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "Temp/StagingArea/res.xhdpi.adaptive_icon-1.png"
+      ],
+      "Outputs": [
+        "D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png"
+      ],
+      "DebugActionIndex": 381
+    },
+    {
+      "Annotation": "CopyFiles D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png",
+      "DisplayName": "Copying ic_launcher_foreground.png",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "Temp/StagingArea/res.xxhdpi.adaptive_icon-1.png"
+      ],
+      "Outputs": [
+        "D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png"
+      ],
+      "DebugActionIndex": 382
+    },
+    {
+      "Annotation": "CopyFiles D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png",
+      "DisplayName": "Copying ic_launcher_foreground.png",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "Temp/StagingArea/res.xxxhdpi.adaptive_icon-1.png"
+      ],
+      "Outputs": [
+        "D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/launcher/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png"
+      ],
+      "DebugActionIndex": 383
     },
     {
       "Annotation": "CopyFiles D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/jniLibs/armeabi-v7a/libmain.so",
@@ -9785,7 +10058,7 @@
       "Outputs": [
         "D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/jniLibs/armeabi-v7a/libmain.so"
       ],
-      "DebugActionIndex": 363
+      "DebugActionIndex": 384
     },
     {
       "Annotation": "SourceBuildPlayerFiles",
@@ -9793,11 +10066,11 @@
       "Inputs": [],
       "Outputs": [],
       "ToBuildDependencies": [
-        363,
-        365
+        384,
+        386
       ],
       "OverwriteOutputs": false,
-      "DebugActionIndex": 364
+      "DebugActionIndex": 385
     },
     {
       "Annotation": "CopyFiles D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/jniLibs/armeabi-v7a/libunity.so",
@@ -9809,7 +10082,7 @@
       "Outputs": [
         "D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/jniLibs/armeabi-v7a/libunity.so"
       ],
-      "DebugActionIndex": 365
+      "DebugActionIndex": 386
     },
     {
       "Annotation": "CopyFiles D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/jniLibs/armeabi-v7a/libmonobdwgc-2.0.so",
@@ -9821,7 +10094,7 @@
       "Outputs": [
         "D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/jniLibs/armeabi-v7a/libmonobdwgc-2.0.so"
       ],
-      "DebugActionIndex": 366
+      "DebugActionIndex": 387
     },
     {
       "Annotation": "CopyFiles D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/jniLibs/armeabi-v7a/libMonoPosixHelper.so",
@@ -9833,7 +10106,7 @@
       "Outputs": [
         "D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/jniLibs/armeabi-v7a/libMonoPosixHelper.so"
       ],
-      "DebugActionIndex": 367
+      "DebugActionIndex": 388
     },
     {
       "Annotation": "CopyFiles D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/jniLibs/armeabi-v7a/libmono-native.so",
@@ -9845,20 +10118,20 @@
       "Outputs": [
         "D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/jniLibs/armeabi-v7a/libmono-native.so"
       ],
-      "DebugActionIndex": 368
+      "DebugActionIndex": 389
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/LauncherManifestDiag.txt_zvqu.info",
       "DisplayName": "Writing LauncherManifestDiag.txt_zvqu.info",
       "ActionType": "WriteFile",
       "PayloadOffset": 266758,
-      "PayloadLength": 22861,
+      "PayloadLength": 22859,
       "PayloadDebugContentSnippet": "{\"AndroidPlayerBuildProgram.Ac",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/csharpactions/LauncherManifestDiag.txt_zvqu.info"
       ],
-      "DebugActionIndex": 369
+      "DebugActionIndex": 390
     },
     {
       "Annotation": "Generate Manifests Library/Bee/artifacts/Android/Manifest/LauncherManifestDiag.txt (+3 others)",
@@ -10108,12 +10381,12 @@
         339,
         341,
         343,
-        369
+        390
       ],
       "OverwriteOutputs": false,
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 370
+      "DebugActionIndex": 391
     },
     {
       "Annotation": "CopyFiles D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/symbols/armeabi-v7a/libmain.so",
@@ -10125,7 +10398,7 @@
       "Outputs": [
         "D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/symbols/armeabi-v7a/libmain.so"
       ],
-      "DebugActionIndex": 371
+      "DebugActionIndex": 392
     },
     {
       "Annotation": "CopyFiles D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/symbols/armeabi-v7a/libmonobdwgc-2.0.so",
@@ -10137,7 +10410,7 @@
       "Outputs": [
         "D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/symbols/armeabi-v7a/libmonobdwgc-2.0.so"
       ],
-      "DebugActionIndex": 372
+      "DebugActionIndex": 393
     },
     {
       "Annotation": "CopyFiles D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/symbols/armeabi-v7a/libunity.so",
@@ -10149,20 +10422,20 @@
       "Outputs": [
         "D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/symbols/armeabi-v7a/libunity.so"
       ],
-      "DebugActionIndex": 373
+      "DebugActionIndex": 394
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/unity_app_guid_lsvf.info",
       "DisplayName": "Writing unity_app_guid_lsvf.info",
       "ActionType": "WriteFile",
-      "PayloadOffset": 289711,
+      "PayloadOffset": 289709,
       "PayloadLength": 15989,
       "PayloadDebugContentSnippet": "{\"System.Object\":null,\"Bee.Tun",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/csharpactions/unity_app_guid_lsvf.info"
       ],
-      "DebugActionIndex": 374
+      "DebugActionIndex": 395
     },
     {
       "Annotation": "GuidGenerator D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/assets/bin/Data/unity_app_guid",
@@ -10302,25 +10575,25 @@
       ],
       "ToBuildDependencies": [
         6,
-        374
+        395
       ],
       "OverwriteOutputs": false,
       "AllowUnexpectedOutput": true,
       "Env": [],
-      "DebugActionIndex": 375
+      "DebugActionIndex": 396
     },
     {
       "Annotation": "WriteText D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/resources/META-INF/com.android.games.engine.build_fingerprint",
       "DisplayName": "Writing com.android.games.engine.build_fingerprint",
       "ActionType": "WriteFile",
-      "PayloadOffset": 305895,
+      "PayloadOffset": 305893,
       "PayloadLength": 65,
       "PayloadDebugContentSnippet": "2022.3.7f1;Mono;Release;StripE",
       "Inputs": [],
       "Outputs": [
         "D:/Unity/FirstGrade/Match_Ring/Match_Ring/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/resources/META-INF/com.android.games.engine.build_fingerprint"
       ],
-      "DebugActionIndex": 376
+      "DebugActionIndex": 397
     },
     {
       "Annotation": "Player",
@@ -10575,16 +10848,37 @@
         361,
         362,
         363,
+        364,
         365,
         366,
         367,
         368,
+        369,
         370,
+        371,
+        372,
+        373,
+        374,
         375,
-        376
+        376,
+        377,
+        378,
+        379,
+        380,
+        381,
+        382,
+        383,
+        384,
+        386,
+        387,
+        388,
+        389,
+        391,
+        396,
+        397
       ],
       "OverwriteOutputs": false,
-      "DebugActionIndex": 377
+      "DebugActionIndex": 398
     }
   ],
   "FileSignatures": [
@@ -10896,8 +11190,8 @@
   ],
         "NamedNodes": {
           "all_tundra_nodes": 0,
-          "SourceBuildPlayerFiles": 364,
-          "Player": 377
+          "SourceBuildPlayerFiles": 385,
+          "Player": 398
         }
 ,  "DefaultNodes": [
     0
