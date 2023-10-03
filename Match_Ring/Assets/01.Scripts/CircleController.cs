@@ -11,7 +11,7 @@ public class CircleController : MonoBehaviour
     [SerializeField] private Transform _ringTrm;
     private Material _material;
     private readonly int _fillAmountHash = Shader.PropertyToID("_FillAmount");
-    private readonly int _ringColorHash = Shader.PropertyToID("_Color2");
+    private readonly int _ringColorHash = Shader.PropertyToID("_Color1");
     private Color _ringColor;
     private float _ringScale = 5;
     private bool _isRedRing = false;
@@ -21,7 +21,6 @@ public class CircleController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _topScoreText;
 
     public UnityEvent OnGameOver;
-    public UnityEvent OnStart;
     private float _startTime;
 
     [SerializeField] private AudioSource _audioSource;
@@ -134,7 +133,7 @@ public class CircleController : MonoBehaviour
     private IEnumerator RedRing()
     {
         _isRedRing = true;
-        _material.SetColor(_ringColorHash, new Color(0.5f, 0.25f, 0.25f, 1));
+        _material.SetColor(_ringColorHash, new Color(0.53f, 0.23f, 0.23f, 1));
         yield return new WaitForSeconds(Mathf.Clamp(Random.Range(0.6f, 1.1f) - float.Parse(_scoreText.text) / 300, 0.5f, 1));
         _material.SetColor(_ringColorHash, _ringColor);
         _isRedRing = false;
@@ -145,19 +144,13 @@ public class CircleController : MonoBehaviour
         OnGameOver?.Invoke();
     }
 
-    public void Restart()
-    {
-        Init();
-        OnStart?.Invoke();
-    }
-
-    private void Init()
+    public void Init()
     {
         _startTime = Time.time;
         StopCoroutine(nameof(DrainAmount));
         _isRedRing = false;
-        _mainCam.backgroundColor = Random.ColorHSV(0, 1, .02f, .02f, 0.8f, 0.8f);
-        _material.SetColor(_ringColorHash, _ringColor = _mainCam.backgroundColor - new Color(0.35f, 0.35f, 0.35f, 0));
+        _mainCam.backgroundColor = Random.ColorHSV(0, 1, .03f, .03f, 0.83f, 0.83f);
+        _material.SetColor(_ringColorHash, _ringColor = _mainCam.backgroundColor - new Color(0.345f, 0.345f, 0.345f, 0));
         transform.localScale = new Vector3(1.5f, 1.5f, 1);
         _ringScale = 5; _ringTrm.localScale = new Vector3(_ringScale, _ringScale, 1);
         _material.SetFloat(_fillAmountHash, 1);
