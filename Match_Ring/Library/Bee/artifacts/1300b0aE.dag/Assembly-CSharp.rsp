@@ -367,11 +367,13 @@
 "Assets/01.Scripts/Core/Data.cs"
 "Assets/01.Scripts/Core/DataManager.cs"
 "Assets/01.Scripts/Core/GameManager.cs"
+"Assets/01.Scripts/Core/IFeedback.cs"
 "Assets/01.Scripts/Core/Pool.cs"
 "Assets/01.Scripts/Core/PoolableMono.cs"
 "Assets/01.Scripts/Core/PoolingListSO.cs"
 "Assets/01.Scripts/Core/PoolManager.cs"
 "Assets/01.Scripts/Core/ScreenManager.cs"
+"Assets/01.Scripts/Core/UIManager.cs"
 "Assets/01.Scripts/RippleEffect.cs"
 -langversion:9.0
 

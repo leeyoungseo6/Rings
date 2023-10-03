@@ -1,26 +1,9 @@
 using System.IO;
 using UnityEngine;
 
-public class DataManager : MonoBehaviour
+public class DataManager
 {
-    private static GameObject _container;
-
-    // ---싱글톤으로 선언--- //
-    private static DataManager _instance;
-    public static DataManager Instance
-    {
-        get
-        {
-            if (!_instance)
-            {
-                _container = new GameObject();
-                _container.name = "DataManager";
-                _instance = _container.AddComponent(typeof(DataManager)) as DataManager;
-                DontDestroyOnLoad(_container);
-            }
-            return _instance;
-        }
-    }
+    public static DataManager Instance;
 
     // --- 게임 데이터 파일이름 설정 ("원하는 이름(영문).json") --- //
     private readonly string _gameDataFileName = "gameData.json";
@@ -28,9 +11,12 @@ public class DataManager : MonoBehaviour
     // --- 저장용 클래스 변수 --- //
     public Data data;
 
+    public DataManager()
+    {
+        LoadGameData();
+    }
 
-    // 불러오기
-    public void LoadGameData()
+    private void LoadGameData()
     {
         string filePath = Path.Combine(Application.persistentDataPath, _gameDataFileName);
 
@@ -43,9 +29,7 @@ public class DataManager : MonoBehaviour
         }
         else data = new Data();
     }
-
-
-    // 저장하기
+    
     public void SaveGameData()
     {
         // 클래스를 Json 형식으로 전환 (true : 가독성 좋게 작성)

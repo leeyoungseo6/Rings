@@ -7,6 +7,7 @@ using Random = UnityEngine.Random;
 public class CircleController : MonoBehaviour
 {
     private Camera _mainCam;
+    private Touch _touch => Input.touches[0];
 
     [SerializeField] private Transform _ringTrm;
     private Material _material;
@@ -18,7 +19,6 @@ public class CircleController : MonoBehaviour
     private float _currentTime = 0;
 
     [SerializeField] private TextMeshProUGUI _scoreText;
-    [SerializeField] private TextMeshProUGUI _topScoreText;
 
     public UnityEvent OnGameOver;
     private float _startTime;
@@ -28,12 +28,12 @@ public class CircleController : MonoBehaviour
     private void Awake()
     {
         Application.targetFrameRate = 60;
-        DataManager.Instance.LoadGameData();
-        _topScoreText.text = DataManager.Instance.data.TopScore.ToString();
         
         _mainCam = Camera.main;
         _material = _ringTrm.GetComponent<SpriteRenderer>().material;
         Init();
+
+        GameManager.Instance.OnGameOver += () => gameObject.SetActive(false);
     }
 
     private void Update()
@@ -46,11 +46,11 @@ public class CircleController : MonoBehaviour
     {
         if (Application.platform == RuntimePlatform.Android)
         {
-            if (Input.touches[0].phase == TouchPhase.Moved)
+            if (_touch.phase == TouchPhase.Moved)
             {
                 float scale =
                     Mathf.Clamp(
-                        -4f + ((Vector2)_mainCam.ScreenToWorldPoint(Input.touches[0].position)).magnitude * 2.25f, 1.5f,
+                        -4f + ((Vector2)_mainCam.ScreenToWorldPoint(_touch.position)).magnitude * 2.25f, 1.5f,
                         5.5f);
                 transform.localScale = new Vector3(scale, scale, 1);
             }
@@ -76,14 +76,21 @@ public class CircleController : MonoBehaviour
             if (_currentTime > 0.1f)
             {
                 PlaySound();
+                RippleEffect();
                 RandomScalingRing();
-                SetScore();
-                StopCoroutine(nameof(DrainAmount));
-                StartCoroutine(nameof(DrainAmount));
+                UIManager.Instance.SetScore();
+                StopCoroutine(nameof(FillAmount));
+                StartCoroutine(nameof(FillAmount));
             }
-            else if (_isRedRing) GameOver();
+            else if (_isRedRing) GameManager.Instance.OnGameOver?.Invoke();
         }
         else _currentTime = 0;
+    }
+
+    private void RippleEffect()
+    {
+        Transform ripple = PoolManager.Instance.Pop("RippleEffect").transform;
+        ripple.localScale = transform.localScale;
     }
 
     private void PlaySound()
@@ -103,7 +110,7 @@ public class CircleController : MonoBehaviour
         else _material.SetColor(_ringColorHash, _ringColor);
     }
 
-    private IEnumerator DrainAmount()
+    private IEnumerator FillAmount()
     {
         float currentTime = 0;
         float percent = 0;
@@ -115,45 +122,28 @@ public class CircleController : MonoBehaviour
             _material.SetFloat(_fillAmountHash, 1 - percent);
             yield return null;
         }
-        GameOver();
-    }
-
-    private void SetScore()
-    {
-        var score = int.Parse(_scoreText.text) + 1;
-        _scoreText.text = score.ToString();
-
-        if (score > DataManager.Instance.data.TopScore)
-        {
-            DataManager.Instance.data.TopScore = score;
-            _topScoreText.text = score.ToString();
-        }
+        
+        GameManager.Instance.OnGameOver?.Invoke();
     }
 
     private IEnumerator RedRing()
     {
         _isRedRing = true;
-        _material.SetColor(_ringColorHash, new Color(0.53f, 0.23f, 0.23f, 1));
+        _material.SetColor(_ringColorHash, new Color(0.55f, 0.24f, 0.24f, 1));
         yield return new WaitForSeconds(Mathf.Clamp(Random.Range(0.6f, 1.1f) - float.Parse(_scoreText.text) / 300, 0.5f, 1));
         _material.SetColor(_ringColorHash, _ringColor);
         _isRedRing = false;
     }
 
-    private void GameOver()
-    {
-        OnGameOver?.Invoke();
-    }
-
     public void Init()
     {
         _startTime = Time.time;
-        StopCoroutine(nameof(DrainAmount));
+        StopCoroutine(nameof(FillAmount));
         _isRedRing = false;
-        _mainCam.backgroundColor = Random.ColorHSV(0, 1, .03f, .03f, 0.83f, 0.83f);
+        _mainCam.backgroundColor = Random.ColorHSV(0, 1, .04f, .04f, 0.83f, 0.83f);
         _material.SetColor(_ringColorHash, _ringColor = _mainCam.backgroundColor - new Color(0.345f, 0.345f, 0.345f, 0));
         transform.localScale = new Vector3(1.5f, 1.5f, 1);
         _ringScale = 5; _ringTrm.localScale = new Vector3(_ringScale, _ringScale, 1);
         _material.SetFloat(_fillAmountHash, 1);
-        _scoreText.text = "0";
     }
 }
