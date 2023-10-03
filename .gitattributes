@@ -1,1 +1,5 @@
 Match_Ring/Library/PackageCache/com.unity.burst@1.8.7/.Runtime/libburst-llvm-15.dylib filter=lfs diff=lfs merge=lfs -text
+Match_Ring/Library/Bee/artifacts/objcopy_b9ry/stripped/libil2cpp.so filter=lfs diff=lfs merge=lfs -text
+Match_Ring/Library/Bee/artifacts/objcopy_b9ry/libil2cpp.dbg.so filter=lfs diff=lfs merge=lfs -text
+Match_Ring/Library/Bee/artifacts/objcopy_b9ry/libil2cpp.so filter=lfs diff=lfs merge=lfs -text
+Match_Ring/Library/Bee/artifacts/objcopy_b9ry/libil2cpp.sym.so filter=lfs diff=lfs merge=lfs -text
