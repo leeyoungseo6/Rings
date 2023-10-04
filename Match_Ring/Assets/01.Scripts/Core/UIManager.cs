@@ -1,14 +1,12 @@
-using System;
 using TMPro;
 using UnityEngine;
 
-public class UIManager : MonoBehaviour
+public class UIManager
 {
     public static UIManager Instance;
     
     private TextMeshProUGUI _scoreText;
     private TextMeshProUGUI _topScoreText;
-    private GameObject _restartButton;
 
     private int _score = 0;
     private int _topScore;
@@ -17,18 +15,10 @@ public class UIManager : MonoBehaviour
     {
         _scoreText = canvasTrm.Find("Canvas_Dynamic/Scores/ScoreText").GetComponent<TextMeshProUGUI>();
         _topScoreText = canvasTrm.Find("Canvas_Dynamic/Scores/TopScoreText").GetComponent<TextMeshProUGUI>();
-        _restartButton = canvasTrm.Find("Canvas_Static/RestartButtonIMG").gameObject;
         _topScoreText.text = DataManager.Instance.data.TopScore.ToString();
-
-        GameManager.Instance.OnGameOver += OnGameOver;
     }
 
-    private void OnDestroy()
-    {
-        GameManager.Instance.OnGameOver -= OnGameOver;
-    }
-
-    public void SetScore()
+    public void AddScore()
     {
         _score += 1;
         _scoreText.text = _score.ToString();
@@ -40,9 +30,9 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    private void OnGameOver()
+    public void SetScore()
     {
         _score = 0;
-        _restartButton.SetActive(true);
+        _scoreText.text = "0";
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using System.Collections;
 using UnityEngine;
@@ -20,7 +21,6 @@ public class CircleController : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI _scoreText;
 
-    public UnityEvent OnGameOver;
     private float _startTime;
 
     [SerializeField] private AudioSource _audioSource;
@@ -32,8 +32,6 @@ public class CircleController : MonoBehaviour
         _mainCam = Camera.main;
         _material = _ringTrm.GetComponent<SpriteRenderer>().material;
         Init();
-
-        GameManager.Instance.OnGameOver += () => gameObject.SetActive(false);
     }
 
     private void Update()
@@ -76,21 +74,28 @@ public class CircleController : MonoBehaviour
             if (_currentTime > 0.1f)
             {
                 PlaySound();
-                RippleEffect();
+                //RippleEffect();
                 RandomScalingRing();
-                UIManager.Instance.SetScore();
+                UIManager.Instance.AddScore();
                 StopCoroutine(nameof(FillAmount));
                 StartCoroutine(nameof(FillAmount));
             }
-            else if (_isRedRing) GameManager.Instance.OnGameOver?.Invoke();
+            else if (_isRedRing) OnGameOver();
         }
         else _currentTime = 0;
     }
 
+    private void OnGameOver()
+    {
+        DataManager.Instance.SaveGameData();
+        GameManager.Instance.OnGameOver?.Invoke();
+    }
+
     private void RippleEffect()
     {
+        Vector3 scale = _ringTrm.localScale;
         Transform ripple = PoolManager.Instance.Pop("RippleEffect").transform;
-        ripple.localScale = transform.localScale;
+        ripple.localScale = scale;
     }
 
     private void PlaySound()
@@ -123,7 +128,7 @@ public class CircleController : MonoBehaviour
             yield return null;
         }
         
-        GameManager.Instance.OnGameOver?.Invoke();
+        OnGameOver();
     }
 
     private IEnumerator RedRing()
@@ -145,5 +150,6 @@ public class CircleController : MonoBehaviour
         transform.localScale = new Vector3(1.5f, 1.5f, 1);
         _ringScale = 5; _ringTrm.localScale = new Vector3(_ringScale, _ringScale, 1);
         _material.SetFloat(_fillAmountHash, 1);
+        UIManager.Instance.SetScore();
     }
 }

@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -10,7 +9,7 @@ public class GameManager : MonoBehaviour
     private PoolingListSO _poolListSO;
     
     public UnityEvent OnScoreChanged; 
-    public Action OnGameOver; 
+    public UnityEvent OnGameOver; 
     public float Difficulty = 0;
      
     private void Awake()
