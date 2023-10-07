@@ -7,8 +7,7 @@ public class GameManager : MonoBehaviour
     
     [SerializeField]
     private PoolingListSO _poolListSO;
-    
-    public UnityEvent OnScoreChanged; 
+
     public UnityEvent OnGameOver; 
     public float Difficulty = 0;
      
@@ -16,6 +15,7 @@ public class GameManager : MonoBehaviour
     {
         Instance ??= this;
         
+        Application.targetFrameRate = 60;
         CreatePoolManager();
         CreateDataManager();
         CreateUIManager();
@@ -44,5 +44,11 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         Difficulty += Time.deltaTime;
+    }
+
+    public void GameOver()
+    {
+        DataManager.Instance.SaveGameData();
+        OnGameOver?.Invoke();
     }
 }

@@ -8,6 +8,7 @@ public class UIManager
     private TextMeshProUGUI _scoreText;
     private TextMeshProUGUI _topScoreText;
 
+    public int Score { get => _score; set => _score = value; }
     private int _score = 0;
     private int _topScore;
 
@@ -20,13 +21,13 @@ public class UIManager
 
     public void AddScore()
     {
-        _score += 1;
-        _scoreText.text = _score.ToString();
+        Score += 1;
+        _scoreText.text = Score.ToString();
 
-        if (_score > DataManager.Instance.data.TopScore)
+        if (Score > DataManager.Instance.data.TopScore)
         {
-            DataManager.Instance.data.TopScore = _score;
-            _topScoreText.text = _score.ToString();
+            DataManager.Instance.data.TopScore = Score;
+            _topScoreText.text = Score.ToString();
         }
     }
 

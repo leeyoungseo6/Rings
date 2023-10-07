@@ -229,9 +229,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _poolListSO: {fileID: 11400000, guid: 3da5031a7d8c90b4eac2c4cbe2681fc9, type: 2}
-  OnScoreChanged:
-    m_PersistentCalls:
-      m_Calls: []
   OnGameOver:
     m_PersistentCalls:
       m_Calls:
@@ -258,6 +255,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1378354009}
+        m_TargetAssemblyTypeName: Ring, Assembly-CSharp
+        m_MethodName: GameOver
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
   Difficulty: 0
 --- !u!4 &143683859
@@ -838,8 +847,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4278387459
+  m_fontColor: {r: 0.01, g: 0.01, b: 0.01, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1004,9 +1013,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbcbab8ec5dcbf742ac71e11a46faa2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ringTrm: {fileID: 1378354008}
-  _scoreText: {fileID: 1990105026}
-  _audioSource: {fileID: 1810520146}
+  OnRingChecked:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1378354009}
+        m_TargetAssemblyTypeName: Ring, Assembly-CSharp
+        m_MethodName: Init
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1810520148}
+        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
+        m_MethodName: PlayWithVariablePitch
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: f5629c7847d72ed48a5c226c7d1138f5, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1184540314
 GameObject:
   m_ObjectHideFlags: 0
@@ -1184,6 +1217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1378354008}
   - component: {fileID: 1378354007}
+  - component: {fileID: 1378354009}
   m_Layer: 0
   m_Name: Ring
   m_TagString: Untagged
@@ -1259,6 +1293,18 @@ Transform:
   - {fileID: 559226170}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1378354009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378354006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d77f6f9bef684e838ea3f1ca2c40af57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1488385863
 GameObject:
   m_ObjectHideFlags: 0
@@ -1637,6 +1683,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1378354009}
+        m_TargetAssemblyTypeName: Ring, Assembly-CSharp
+        m_MethodName: GameStart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 188085636}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -1697,6 +1755,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1810520147}
   - component: {fileID: 1810520146}
+  - component: {fileID: 1810520148}
   m_Layer: 0
   m_Name: Audio
   m_TagString: Untagged
@@ -1815,6 +1874,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1810520148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810520145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 645eced616c5a3e4c840ff178b207474, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pitchRandomness: 0.1
+  _basePitch: 0
 --- !u!1 &1890119406
 GameObject:
   m_ObjectHideFlags: 0

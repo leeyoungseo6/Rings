@@ -1,6 +1,4 @@
 using System;
-using TMPro;
-using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 using Random = UnityEngine.Random;
@@ -10,27 +8,17 @@ public class CircleController : MonoBehaviour
     private Camera _mainCam;
     private Touch _touch => Input.touches[0];
 
-    [SerializeField] private Transform _ringTrm;
-    private Material _material;
-    private readonly int _fillAmountHash = Shader.PropertyToID("_FillAmount");
-    private readonly int _ringColorHash = Shader.PropertyToID("_Color1");
     private Color _ringColor;
     private float _ringScale = 5;
-    private bool _isRedRing = false;
-    private float _currentTime = 0;
-
-    [SerializeField] private TextMeshProUGUI _scoreText;
-
+    private bool _isRedRing;
+    private float _currentTime;
     private float _startTime;
 
-    [SerializeField] private AudioSource _audioSource;
+    public UnityEvent<float, Action> OnRingChecked;
     
     private void Awake()
     {
-        Application.targetFrameRate = 60;
-        
         _mainCam = Camera.main;
-        _material = _ringTrm.GetComponent<SpriteRenderer>().material;
         Init();
     }
 
@@ -73,83 +61,32 @@ public class CircleController : MonoBehaviour
             _currentTime += Time.deltaTime;
             if (_currentTime > 0.1f)
             {
-                PlaySound();
-                //RippleEffect();
-                RandomScalingRing();
                 UIManager.Instance.AddScore();
-                StopCoroutine(nameof(FillAmount));
-                StartCoroutine(nameof(FillAmount));
+                NewRing();
             }
-            else if (_isRedRing) OnGameOver();
+            else if (_isRedRing) GameManager.Instance.GameOver();
         }
         else _currentTime = 0;
     }
 
-    private void OnGameOver()
+    private void NewRing()
     {
-        DataManager.Instance.SaveGameData();
-        GameManager.Instance.OnGameOver?.Invoke();
-    }
-
-    private void RippleEffect()
-    {
-        Vector3 scale = _ringTrm.localScale;
-        Transform ripple = PoolManager.Instance.Pop("RippleEffect").transform;
-        ripple.localScale = scale;
-    }
-
-    private void PlaySound()
-    {
-        _audioSource.Play();
-        _audioSource.pitch = Random.Range(0.9f, 1.1f);
-    }
-
-    private void RandomScalingRing()
-    {
+        float prevScale = _ringScale;
         do _ringScale = Random.Range(1.5f, 5.4f);
-        while (Mathf.Abs(_ringScale - _ringTrm.localScale.x) < 1);
-        _ringTrm.localScale = new Vector3(_ringScale, _ringScale, 1);
+        while (Mathf.Abs(_ringScale - prevScale) < 1);
 
-        int random = Random.Range(0, 5);
-        if (random == 0) StartCoroutine(RedRing());
-        else _material.SetColor(_ringColorHash, _ringColor);
-    }
-
-    private IEnumerator FillAmount()
-    {
-        float currentTime = 0;
-        float percent = 0;
-        float time = Mathf.Clamp(4 - (Time.time - _startTime) / 30, 1f, 10);
-        while (percent < 1)
-        {
-            currentTime += Time.deltaTime;
-            percent = currentTime / time;
-            _material.SetFloat(_fillAmountHash, 1 - percent);
-            yield return null;
-        }
+        _isRedRing = Random.Range(0, 5) == 0;
         
-        OnGameOver();
-    }
-
-    private IEnumerator RedRing()
-    {
-        _isRedRing = true;
-        _material.SetColor(_ringColorHash, new Color(0.55f, 0.24f, 0.24f, 1));
-        yield return new WaitForSeconds(Mathf.Clamp(Random.Range(0.6f, 1.1f) - float.Parse(_scoreText.text) / 300, 0.5f, 1));
-        _material.SetColor(_ringColorHash, _ringColor);
-        _isRedRing = false;
+        OnRingChecked?.Invoke(_ringScale, _isRedRing ? () => _isRedRing = false : null);
     }
 
     public void Init()
     {
-        _startTime = Time.time;
-        StopCoroutine(nameof(FillAmount));
+        _ringScale = 5;
         _isRedRing = false;
-        _mainCam.backgroundColor = Random.ColorHSV(0, 1, .04f, .04f, 0.83f, 0.83f);
-        _material.SetColor(_ringColorHash, _ringColor = _mainCam.backgroundColor - new Color(0.345f, 0.345f, 0.345f, 0));
-        transform.localScale = new Vector3(1.5f, 1.5f, 1);
-        _ringScale = 5; _ringTrm.localScale = new Vector3(_ringScale, _ringScale, 1);
-        _material.SetFloat(_fillAmountHash, 1);
+        _startTime = Time.time;
         UIManager.Instance.SetScore();
+        transform.localScale = new Vector3(1.5f, 1.5f, 1);
+        _mainCam.backgroundColor = Random.ColorHSV(0, 1, .04f, .04f, 0.83f, 0.83f);
     }
 }

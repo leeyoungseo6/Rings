@@ -13,24 +13,23 @@ public class RippleEffect : PoolableMono, IFeedback
     
     public override void Init()
     {
-        StopCoroutine(nameof(DOColorAndDoScaleCoroutine));
-        StartCoroutine(nameof(DOColorAndDoScaleCoroutine));
+        _mat.SetColor(_colorHash, new Color(1, 1, 1, 0));
     }
 
-    private IEnumerator DOColorAndDoScaleCoroutine()
+    private IEnumerator DOColorAndDoScaleCoroutine(bool isSpread)
     {
-        yield return null;
         Vector3 startScale = transform.localScale;
-        Vector3 endScale = startScale * 1.15f;
+        Vector3 endScale = startScale + new Vector3(0.5f, 0.5f);
         Color startColor = new Color(1, 1, 1, 0);
         float currentTime = 0;
         float percent = 0;
-        
+
+        if (isSpread == false) transform.localScale += new Vector3(0.2f, 0.2f);
         while (percent < 0.5f)
         {
             currentTime += Time.deltaTime;
             percent = currentTime / 0.375f;
-            transform.localScale = Vector3.Lerp(startScale, endScale, 1 - Mathf.Pow(1 - percent, 3));
+            if (isSpread) transform.localScale = Vector3.Lerp(startScale, endScale, 1 - Mathf.Pow(1 - percent, 3));
             _mat.SetColor(_colorHash, Color.Lerp(startColor, Color.white, percent * 2));
             yield return null;
         }
@@ -39,7 +38,7 @@ public class RippleEffect : PoolableMono, IFeedback
         {
             currentTime += Time.deltaTime;
             percent = currentTime / 0.375f;
-            transform.localScale = Vector3.Lerp(startScale, endScale, 1 - Mathf.Pow(1 - percent, 3));
+            if (isSpread) transform.localScale = Vector3.Lerp(startScale, endScale, 1 - Mathf.Pow(1 - percent, 3));
             _mat.SetColor(_colorHash, Color.Lerp(Color.white, startColor, (percent - 0.5f) * 2));
             yield return null;
         }
@@ -47,9 +46,9 @@ public class RippleEffect : PoolableMono, IFeedback
         FinishFeedback();
     }
 
-    public void StartFeedback()
+    public void StartFeedback(bool value = true)
     {
-        
+        StartCoroutine(DOColorAndDoScaleCoroutine(value));
     }
 
     public void FinishFeedback()

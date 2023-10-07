@@ -1,5 +1,8 @@
 public interface IFeedback
 {
-    public abstract void StartFeedback();
-    public abstract void FinishFeedback();
+    void StartFeedback()
+    {
+        
+    }
+    void FinishFeedback();
 }
