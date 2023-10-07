@@ -12,7 +12,6 @@ public class CircleController : MonoBehaviour
     private float _ringScale = 5;
     private bool _isRedRing;
     private float _currentTime;
-    private float _startTime;
 
     public UnityEvent<float, Action> OnRingChecked;
     
@@ -64,7 +63,10 @@ public class CircleController : MonoBehaviour
                 UIManager.Instance.AddScore();
                 NewRing();
             }
-            else if (_isRedRing) GameManager.Instance.GameOver();
+            else if (_isRedRing)
+            {
+                GameManager.Instance.GameOver();
+            }
         }
         else _currentTime = 0;
     }
@@ -84,8 +86,8 @@ public class CircleController : MonoBehaviour
     {
         _ringScale = 5;
         _isRedRing = false;
-        _startTime = Time.time;
         UIManager.Instance.SetScore();
+        GameManager.Instance.Difficulty = 0;
         transform.localScale = new Vector3(1.5f, 1.5f, 1);
         _mainCam.backgroundColor = Random.ColorHSV(0, 1, .04f, .04f, 0.83f, 0.83f);
     }

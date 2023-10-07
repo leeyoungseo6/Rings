@@ -17,10 +17,7 @@ public class Ring : MonoBehaviour
         _material = GetComponent<SpriteRenderer>().material;
     }
 
-    private void Start()
-    {
-        GameStart();
-    }
+    private void Start() => GameStart();
 
     public void GameStart()
     {
@@ -29,10 +26,15 @@ public class Ring : MonoBehaviour
         transform.localScale = new Vector3(5, 5, 1);
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Q)) GameOver();
+    }
+
     public void GameOver()
     {
-        StopCoroutine(nameof(RedRing));
-        StopCoroutine(nameof(FillAmount));
+        Debug.Log("asdf");
+        StopAllCoroutines();
     }
 
     public void Init(float ringScale, Action action)
@@ -62,10 +64,10 @@ public class Ring : MonoBehaviour
         GameManager.Instance.GameOver();
     }
 
-    private IEnumerator RedRing(Action action)
+    private IEnumerator RedRing(Action action = null)
     {
         _material.SetColor(_ringColorHash, new Color(0.55f, 0.24f, 0.24f, 1));
-        yield return new WaitForSeconds(Mathf.Clamp(Random.Range(0.6f, 1.1f) - (float)UIManager.Instance.Score / 300, 0.5f, 1));
+        yield return new WaitForSeconds(Mathf.Clamp(Random.Range(0.6f, 1.1f) - GameManager.Instance.Difficulty / 300, 0.5f, 1));
         _material.SetColor(_ringColorHash, _ringColor);
         action?.Invoke();
     }

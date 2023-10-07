@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        DataManager.Instance.SaveGameData();
         OnGameOver?.Invoke();
+        DataManager.Instance.SaveGameData();
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,13 +22,17 @@ public class PoolManager
 
     public PoolableMono Pop(string name)
     {
-        if (!_pools.ContainsKey(name))
+        PoolableMono item;
+        try
         {
+            item = _pools[name].Pop();
+        }
+        catch (NullReferenceException e)
+        {
+            Console.WriteLine(e);
             Debug.LogError($"Prefab does not exist on pool : {name}");
             return null;
         }
-
-        PoolableMono item = _pools[name].Pop();
         item.Init();
         return item;
     }
