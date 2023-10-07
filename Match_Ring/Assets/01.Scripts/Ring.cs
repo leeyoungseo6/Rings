@@ -26,17 +26,6 @@ public class Ring : MonoBehaviour
         transform.localScale = new Vector3(5, 5, 1);
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Q)) GameOver();
-    }
-
-    public void GameOver()
-    {
-        Debug.Log("asdf");
-        StopAllCoroutines();
-    }
-
     public void Init(float ringScale, Action action)
     {
         StopCoroutine(nameof(FillAmount));
@@ -52,7 +41,7 @@ public class Ring : MonoBehaviour
     {
         float currentTime = 0;
         float percent = 0;
-        float time = Mathf.Clamp(4 - Time.time / 30, 1f, 10);
+        float time = Mathf.Clamp(4 - GameManager.Instance.Difficulty / 30, 1f, 10);
         while (percent < 1)
         {
             currentTime += Time.deltaTime;

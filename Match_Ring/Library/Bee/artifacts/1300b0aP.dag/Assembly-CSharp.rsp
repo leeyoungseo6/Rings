@@ -315,9 +315,19 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/01.Scripts/CircleController.cs"
-"Assets/01.Scripts/Data.cs"
-"Assets/01.Scripts/DataManager.cs"
-"Assets/01.Scripts/ScreenManager.cs"
+"Assets/01.Scripts/Core/AudioPlayer.cs"
+"Assets/01.Scripts/Core/Data.cs"
+"Assets/01.Scripts/Core/DataManager.cs"
+"Assets/01.Scripts/Core/GameManager.cs"
+"Assets/01.Scripts/Core/Pool.cs"
+"Assets/01.Scripts/Core/PoolableMono.cs"
+"Assets/01.Scripts/Core/PoolingListSO.cs"
+"Assets/01.Scripts/Core/PoolManager.cs"
+"Assets/01.Scripts/Core/ScreenManager.cs"
+"Assets/01.Scripts/Core/UIManager.cs"
+"Assets/01.Scripts/Feedback/IFeedback.cs"
+"Assets/01.Scripts/Feedback/RippleEffect.cs"
+"Assets/01.Scripts/Ring.cs"
 -langversion:9.0
 
 /deterministic

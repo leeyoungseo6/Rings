@@ -25,6 +25,7 @@ public class CircleController : MonoBehaviour
     {
         ScalingCircle();
         CheckCircle();
+        GameManager.Instance.Difficulty += Time.deltaTime;
     }
 
     private void ScalingCircle()
@@ -65,7 +66,8 @@ public class CircleController : MonoBehaviour
             }
             else if (_isRedRing)
             {
-                GameManager.Instance.GameOver();
+                GameManager.Instance.Difficulty += 10;
+                NewRing();
             }
         }
         else _currentTime = 0;

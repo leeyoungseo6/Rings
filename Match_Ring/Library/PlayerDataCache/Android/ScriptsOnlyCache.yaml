@@ -1,7 +1,12 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - AudioPlayer
     - CircleController
+    - GameManager
+    - PoolingListSO
+    - Ring
+    - RippleEffect
     - ScreenManager
     Unity.RenderPipelines.Core.Runtime:
     - UnityEngine.Rendering.UI.DebugUIHandlerBitField
@@ -45,12 +50,10 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.Universal.UniversalRenderPipelineGlobalSettings
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.RiderScriptEditorData
+    - Packages.Rider.Editor.RiderScriptEditorPersistedState
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.ShaderGraph.Editor.dll:
-    - UnityEditor.Graphing.GraphObject
     - UnityEditor.ShaderGraph.Drawing.MaterialGraphEditWindow
-    - UnityEditor.ShaderGraph.ShaderGraphProjectSettings
-    - UnityEditor.ShaderGraph.SubGraphAsset
     Unity.TextMeshPro:
     - TMPro.TMP_FontAsset
     - TMPro.TMP_Settings
@@ -85,6 +88,8 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
   serializedClasses:
+    Assembly-CSharp:
+    - PoolingPair
     Unity.RenderPipelines.Core.Runtime:
     - UnityEngine.Rendering.UI.DebugUIPrefabBundle
     Unity.RenderPipelines.Universal.Runtime:
@@ -105,6 +110,7 @@ ScriptsOnlyBuild:
     - UnityEngine.Events.PersistentCallGroup
     - UnityEngine.Events.PersistentListenerMode
     - UnityEngine.Events.UnityEvent
+    - UnityEngine.Events.UnityEvent`2[System.Single,System.Action]
     - UnityEngine.RectOffset
     UnityEngine.TextCoreFontEngineModule:
     - UnityEngine.TextCore.FaceInfo
@@ -128,9 +134,18 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: Ring
+    methodName: GameOver
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: Ring
+    methodName: Init
+  - assembly: Assembly-CSharp
+    fullTypeName: AudioPlayer
+    methodName: PlayWithVariablePitch
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
@@ -146,6 +161,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: CircleController
     methodName: Init
+  - assembly: Assembly-CSharp
+    fullTypeName: Ring
+    methodName: GameStart
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
@@ -231,93 +249,103 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 17568}
     - Class: 114
-      Script: {instanceID: 17768}
+      Script: {instanceID: 17770}
     - Class: 114
-      Script: {instanceID: 17894}
+      Script: {instanceID: 17896}
     - Class: 114
-      Script: {instanceID: 18008}
+      Script: {instanceID: 18010}
     - Class: 114
-      Script: {instanceID: 18304}
+      Script: {instanceID: 18306}
     - Class: 114
-      Script: {instanceID: 18450}
+      Script: {instanceID: 18452}
     - Class: 114
-      Script: {instanceID: 18584}
+      Script: {instanceID: 18536}
     - Class: 114
-      Script: {instanceID: 19120}
+      Script: {instanceID: 18588}
     - Class: 114
-      Script: {instanceID: 19212}
+      Script: {instanceID: 18812}
     - Class: 114
-      Script: {instanceID: 19326}
+      Script: {instanceID: 19128}
     - Class: 114
-      Script: {instanceID: 19536}
+      Script: {instanceID: 19220}
     - Class: 114
-      Script: {instanceID: 19586}
+      Script: {instanceID: 19334}
     - Class: 114
-      Script: {instanceID: 19678}
+      Script: {instanceID: 19544}
     - Class: 114
-      Script: {instanceID: 20064}
+      Script: {instanceID: 19594}
     - Class: 114
-      Script: {instanceID: 20202}
+      Script: {instanceID: 19686}
     - Class: 114
-      Script: {instanceID: 20382}
+      Script: {instanceID: 20074}
     - Class: 114
-      Script: {instanceID: 20464}
+      Script: {instanceID: 20212}
     - Class: 114
-      Script: {instanceID: 20606}
+      Script: {instanceID: 20392}
     - Class: 114
-      Script: {instanceID: 21460}
+      Script: {instanceID: 20474}
     - Class: 114
-      Script: {instanceID: 21528}
+      Script: {instanceID: 20616}
     - Class: 114
-      Script: {instanceID: 21624}
+      Script: {instanceID: 21430}
     - Class: 114
-      Script: {instanceID: 21646}
+      Script: {instanceID: 21472}
     - Class: 114
-      Script: {instanceID: 21718}
+      Script: {instanceID: 21540}
     - Class: 114
-      Script: {instanceID: 21732}
+      Script: {instanceID: 21636}
     - Class: 114
-      Script: {instanceID: 21988}
+      Script: {instanceID: 21658}
     - Class: 114
-      Script: {instanceID: 21992}
+      Script: {instanceID: 21730}
     - Class: 114
-      Script: {instanceID: 22012}
+      Script: {instanceID: 21744}
     - Class: 114
-      Script: {instanceID: 22384}
+      Script: {instanceID: 21998}
     - Class: 114
-      Script: {instanceID: 22730}
+      Script: {instanceID: 22002}
     - Class: 114
-      Script: {instanceID: 22744}
+      Script: {instanceID: 22006}
     - Class: 114
-      Script: {instanceID: 22834}
+      Script: {instanceID: 22026}
     - Class: 114
-      Script: {instanceID: 22840}
+      Script: {instanceID: 22398}
     - Class: 114
-      Script: {instanceID: 22994}
+      Script: {instanceID: 22440}
     - Class: 114
-      Script: {instanceID: 23038}
+      Script: {instanceID: 22746}
     - Class: 114
-      Script: {instanceID: 23098}
+      Script: {instanceID: 22760}
     - Class: 114
-      Script: {instanceID: 23188}
+      Script: {instanceID: 22850}
     - Class: 114
-      Script: {instanceID: 23202}
+      Script: {instanceID: 22856}
     - Class: 114
-      Script: {instanceID: 23336}
+      Script: {instanceID: 23010}
     - Class: 114
-      Script: {instanceID: 23506}
+      Script: {instanceID: 23054}
     - Class: 114
-      Script: {instanceID: 23666}
+      Script: {instanceID: 23114}
     - Class: 114
-      Script: {instanceID: 23718}
+      Script: {instanceID: 23204}
     - Class: 114
-      Script: {instanceID: 23756}
+      Script: {instanceID: 23218}
     - Class: 114
-      Script: {instanceID: 24136}
+      Script: {instanceID: 23352}
     - Class: 114
-      Script: {instanceID: 24960}
+      Script: {instanceID: 23522}
     - Class: 114
-      Script: {instanceID: 25338}
+      Script: {instanceID: 23684}
+    - Class: 114
+      Script: {instanceID: 23736}
+    - Class: 114
+      Script: {instanceID: 23774}
+    - Class: 114
+      Script: {instanceID: 24154}
+    - Class: 114
+      Script: {instanceID: 24978}
+    - Class: 114
+      Script: {instanceID: 25358}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -623,6 +651,12 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerWidget
   - hash:
       serializedVersion: 2
+      Hash: 5d8f23231f4dd6c8323bf6b89f8148ef
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: GameManager
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -675,6 +709,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: TestResultRendererCallback
+  - hash:
+      serializedVersion: 2
+      Hash: acd21b6914c0bdc9956dd2dfacfe0926
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PoolingListSO
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -935,7 +975,7 @@ ScriptsOnlyBuild:
     className: ChromaticAberration
   - hash:
       serializedVersion: 2
-      Hash: 653262586eff9c46d87bfcbf09e09d66
+      Hash: 50a63ba822c5922bdeaf797ff5535ff5
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: CircleController
@@ -1049,6 +1089,12 @@ ScriptsOnlyBuild:
     className: VolumeProfile
   - hash:
       serializedVersion: 2
+      Hash: 5c5df69cc29e044c9775202c98a09ae9
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: AudioPlayer
+  - hash:
+      serializedVersion: 2
       Hash: 6237f92becd6162fa105361ab9ce2a00
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
@@ -1157,6 +1203,12 @@ ScriptsOnlyBuild:
     className: PanelEventHandler
   - hash:
       serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Ring
+  - hash:
+      serializedVersion: 2
       Hash: 7a0dffef755dbed4f4799f891b173e23
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering.UI
@@ -1209,6 +1261,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering.UI
     className: UIFoldout
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: RippleEffect
   - hash:
       serializedVersion: 2
       Hash: a9996d5513cfdb2a18bf40e4b92c4518
@@ -1557,12 +1615,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering
     className: Volume
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: DataManager
   - hash:
       serializedVersion: 2
       Hash: 116a5d45ac93b8a51d0a895f4b9c4df2

@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     private PoolingListSO _poolListSO;
 
     public UnityEvent OnGameOver; 
-    public float Difficulty = 0;
+    [field:SerializeField] public float Difficulty { get; set; }
      
     private void Awake()
     {
@@ -39,11 +39,6 @@ public class GameManager : MonoBehaviour
         {
             PoolManager.Instance.CreatePool(pair.Prefab, pair.Count);
         }
-    }
-
-    private void Update()
-    {
-        Difficulty += Time.deltaTime;
     }
 
     public void GameOver()
