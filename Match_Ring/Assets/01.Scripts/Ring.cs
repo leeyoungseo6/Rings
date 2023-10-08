@@ -30,7 +30,7 @@ public class Ring : MonoBehaviour
     {
         StopCoroutine(nameof(FillAmount));
         StartCoroutine(nameof(FillAmount));
-        
+
         transform.localScale = new Vector3(ringScale, ringScale, 1);
         
         if (action != null) StartCoroutine(nameof(RedRing), action);
@@ -41,7 +41,7 @@ public class Ring : MonoBehaviour
     {
         float currentTime = 0;
         float percent = 0;
-        float time = Mathf.Clamp(4 - GameManager.Instance.Difficulty / 30, 1f, 10);
+        float time = 4 - GameManager.Instance.Difficulty / 30;
         while (percent < 1)
         {
             currentTime += Time.deltaTime;
@@ -56,7 +56,7 @@ public class Ring : MonoBehaviour
     private IEnumerator RedRing(Action action = null)
     {
         _material.SetColor(_ringColorHash, new Color(0.55f, 0.24f, 0.24f, 1));
-        yield return new WaitForSeconds(Mathf.Clamp(Random.Range(0.6f, 1.1f) - GameManager.Instance.Difficulty / 300, 0.5f, 1));
+        yield return new WaitForSeconds(Random.Range(0.6f, 1.1f) - GameManager.Instance.Difficulty / 300);
         _material.SetColor(_ringColorHash, _ringColor);
         action?.Invoke();
     }

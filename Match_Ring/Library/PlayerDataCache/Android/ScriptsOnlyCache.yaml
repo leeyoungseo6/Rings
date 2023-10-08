@@ -134,9 +134,9 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
-  - assembly: Assembly-CSharp
-    fullTypeName: Ring
-    methodName: GameOver
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.MonoBehaviour
+    methodName: StopAllCoroutines
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
@@ -283,69 +283,69 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 20392}
     - Class: 114
-      Script: {instanceID: 20474}
+      Script: {instanceID: 20614}
     - Class: 114
-      Script: {instanceID: 20616}
+      Script: {instanceID: 21428}
     - Class: 114
-      Script: {instanceID: 21430}
+      Script: {instanceID: 21470}
     - Class: 114
-      Script: {instanceID: 21472}
+      Script: {instanceID: 21538}
     - Class: 114
-      Script: {instanceID: 21540}
+      Script: {instanceID: 21634}
     - Class: 114
-      Script: {instanceID: 21636}
+      Script: {instanceID: 21656}
     - Class: 114
-      Script: {instanceID: 21658}
+      Script: {instanceID: 21728}
     - Class: 114
-      Script: {instanceID: 21730}
+      Script: {instanceID: 21742}
     - Class: 114
-      Script: {instanceID: 21744}
+      Script: {instanceID: 21996}
     - Class: 114
-      Script: {instanceID: 21998}
+      Script: {instanceID: 22000}
     - Class: 114
-      Script: {instanceID: 22002}
+      Script: {instanceID: 22004}
     - Class: 114
-      Script: {instanceID: 22006}
+      Script: {instanceID: 22024}
     - Class: 114
-      Script: {instanceID: 22026}
+      Script: {instanceID: 22396}
     - Class: 114
-      Script: {instanceID: 22398}
+      Script: {instanceID: 22438}
     - Class: 114
-      Script: {instanceID: 22440}
+      Script: {instanceID: 22744}
     - Class: 114
-      Script: {instanceID: 22746}
+      Script: {instanceID: 22758}
     - Class: 114
-      Script: {instanceID: 22760}
+      Script: {instanceID: 22848}
     - Class: 114
-      Script: {instanceID: 22850}
+      Script: {instanceID: 22854}
     - Class: 114
-      Script: {instanceID: 22856}
+      Script: {instanceID: 23008}
     - Class: 114
-      Script: {instanceID: 23010}
+      Script: {instanceID: 23052}
     - Class: 114
-      Script: {instanceID: 23054}
+      Script: {instanceID: 23112}
     - Class: 114
-      Script: {instanceID: 23114}
+      Script: {instanceID: 23202}
     - Class: 114
-      Script: {instanceID: 23204}
+      Script: {instanceID: 23216}
     - Class: 114
-      Script: {instanceID: 23218}
+      Script: {instanceID: 23350}
     - Class: 114
-      Script: {instanceID: 23352}
+      Script: {instanceID: 23520}
     - Class: 114
-      Script: {instanceID: 23522}
+      Script: {instanceID: 23682}
     - Class: 114
-      Script: {instanceID: 23684}
+      Script: {instanceID: 23734}
     - Class: 114
-      Script: {instanceID: 23736}
+      Script: {instanceID: 23772}
     - Class: 114
-      Script: {instanceID: 23774}
+      Script: {instanceID: 24152}
     - Class: 114
-      Script: {instanceID: 24154}
+      Script: {instanceID: 24976}
     - Class: 114
-      Script: {instanceID: 24978}
+      Script: {instanceID: 25356}
     - Class: 114
-      Script: {instanceID: 25358}
+      Script: {instanceID: 25664}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -651,7 +651,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerWidget
   - hash:
       serializedVersion: 2
-      Hash: 5d8f23231f4dd6c8323bf6b89f8148ef
+      Hash: 6f853f40c04555cb8b41f2987f3dd7cd
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: GameManager
@@ -973,12 +973,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.RenderPipelines.Universal.Runtime
     namespaceName: UnityEngine.Rendering.Universal
     className: ChromaticAberration
-  - hash:
-      serializedVersion: 2
-      Hash: 50a63ba822c5922bdeaf797ff5535ff5
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: CircleController
   - hash:
       serializedVersion: 2
       Hash: f6831ac80ec81c5d5b370c0ed0fee997
@@ -1651,6 +1645,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 8cf53f91a0f3ba57ed9ac39a96e0803c
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: CircleController
   platform: 13
   scenePathNames:
   - Assets/00.Scenes/SampleScene.unity

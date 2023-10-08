@@ -295,7 +295,7 @@ struct __Il2CppComDelegate_tD0DD2BBA6AC8F151D32B6DFD02F6BDA339F8DC4D  : public I
 struct Mobile_t304A73480DF447472BDB16BA19A9E4FE2C8CB2DD  : public RuntimeObject
 {
 };
-struct U3CFillAmountU3Ed__11_t6B84360CB11D4A50D93511EF199A757A174C8985  : public RuntimeObject
+struct U3CFillAmountU3Ed__9_t39075917FE2769A26A6FBA3608A258EBE522EA82  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
@@ -304,7 +304,7 @@ struct U3CFillAmountU3Ed__11_t6B84360CB11D4A50D93511EF199A757A174C8985  : public
 	float ___U3CpercentU3E5__3;
 	float ___U3CtimeU3E5__4;
 };
-struct U3CRedRingU3Ed__12_t651971A337B4F232C93A91F1687A6C08FAA21247  : public RuntimeObject
+struct U3CRedRingU3Ed__10_t4998C7A757E6D2F2BC9EF343D0AEF4BF96A5D33A  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
@@ -1226,17 +1226,17 @@ struct VFXSpawnerState_tCAF49FEA2C8BB3E0BB1E9C3C3F2649576CB64281_marshaled_com
 	int32_t ___m_Owner;
 	VFXEventAttribute_tA764A595356174BA39C782A8A64B47B39FB3F518_marshaled_com* ___m_WrapEventAttribute;
 };
-struct U3CDOColorAndDoScaleCoroutineU3Ed__4_tE88C5232B3340F55EFF67262DE3AAE60FB0BA290  : public RuntimeObject
+struct U3CDOColorAndDoScaleCoroutineU3Ed__6_t2940605F4768E40641337B03BA0FA76393E364A1  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
 	RippleEffect_tC6B5DC549317D4D06A504830965D62F0F4197205* ___U3CU3E4__this;
 	bool ___isSpread;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___endScale;
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___U3CstartScaleU3E5__2;
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___U3CendScaleU3E5__3;
-	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___U3CstartColorU3E5__4;
-	float ___U3CcurrentTimeU3E5__5;
-	float ___U3CpercentU3E5__6;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___U3CstartColorU3E5__3;
+	float ___U3CcurrentTimeU3E5__4;
+	float ___U3CpercentU3E5__5;
 };
 struct LightData_tAC4023737E9903DE3F96B993AA323E062ABCB9ED 
 {
@@ -1447,7 +1447,7 @@ struct GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6  : public MonoBehav
 {
 	PoolingListSO_t9F75B4246BE01636DF35C6BCE62F7E95705E1993* ____poolListSO;
 	UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* ___OnGameOver;
-	float ___Difficulty;
+	float ___U3CDifficultyU3Ek__BackingField;
 };
 struct PoolableMono_t7B3710A8E592CF4844A3883E24FD6F3D40266B80  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -1472,8 +1472,10 @@ struct Tilemap_t18C4166D0AC702D5BFC0C411FA73C4B61D9D1751  : public GridLayout_tA
 };
 struct RippleEffect_tC6B5DC549317D4D06A504830965D62F0F4197205  : public PoolableMono_t7B3710A8E592CF4844A3883E24FD6F3D40266B80
 {
+	Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* ____mainCam;
 	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ____mat;
 	int32_t ____colorHash;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ____color;
 };
 struct U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA_StaticFields
 {
@@ -1673,13 +1675,13 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize5438 = { sizeof(UIManager_t1
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize5439;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize5439 = { 0, -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize5440;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize5440 = { sizeof(U3CDOColorAndDoScaleCoroutineU3Ed__4_tE88C5232B3340F55EFF67262DE3AAE60FB0BA290), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize5440 = { sizeof(U3CDOColorAndDoScaleCoroutineU3Ed__6_t2940605F4768E40641337B03BA0FA76393E364A1), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize5441;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize5441 = { sizeof(RippleEffect_tC6B5DC549317D4D06A504830965D62F0F4197205), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize5442;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize5442 = { sizeof(U3CFillAmountU3Ed__11_t6B84360CB11D4A50D93511EF199A757A174C8985), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize5442 = { sizeof(U3CFillAmountU3Ed__9_t39075917FE2769A26A6FBA3608A258EBE522EA82), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize5443;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize5443 = { sizeof(U3CRedRingU3Ed__12_t651971A337B4F232C93A91F1687A6C08FAA21247), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize5443 = { sizeof(U3CRedRingU3Ed__10_t4998C7A757E6D2F2BC9EF343D0AEF4BF96A5D33A), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize5444;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize5444 = { sizeof(Ring_tFBB3222B5D927C1E69150C0CE3CD7DAE29D44145), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize5445;

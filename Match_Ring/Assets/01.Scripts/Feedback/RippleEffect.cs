@@ -3,24 +3,27 @@ using UnityEngine;
 
 public class RippleEffect : PoolableMono, IFeedback
 {
+    private Camera _mainCam;
     private Material _mat;
     private readonly int _colorHash = Shader.PropertyToID("_Color1");
+    private Color _color;
 
     private void Awake()
     {
+        _mainCam = Camera.main;
         _mat = GetComponent<SpriteRenderer>().material;
     }
     
     public override void Init()
     {
-        _mat.SetColor(_colorHash, new Color(1, 1, 1, 0));
+        _color = _mainCam.backgroundColor - new Color(0.1f, 0.1f, 0.1f, 0);
+        _mat.SetColor(_colorHash, _color - new Color(0, 0, 0, 1));
     }
 
-    private IEnumerator DOColorAndDoScaleCoroutine(bool isSpread)
+    private IEnumerator DOColorAndDoScaleCoroutine(Vector3 endScale, bool isSpread)
     {
         Vector3 startScale = transform.localScale;
-        Vector3 endScale = startScale + new Vector3(0.5f, 0.5f);
-        Color startColor = new Color(1, 1, 1, 0);
+        Color startColor = _mat.GetColor(_colorHash);
         float currentTime = 0;
         float percent = 0;
 
@@ -28,27 +31,27 @@ public class RippleEffect : PoolableMono, IFeedback
         while (percent < 0.5f)
         {
             currentTime += Time.deltaTime;
-            percent = currentTime / 0.375f;
+            percent = currentTime / 0.4f;
             if (isSpread) transform.localScale = Vector3.Lerp(startScale, endScale, 1 - Mathf.Pow(1 - percent, 3));
-            _mat.SetColor(_colorHash, Color.Lerp(startColor, Color.white, percent * 2));
+            _mat.SetColor(_colorHash, Color.Lerp(startColor, _color, percent * 2));
             yield return null;
         }
 
         while (percent < 1f)
         {
             currentTime += Time.deltaTime;
-            percent = currentTime / 0.375f;
+            percent = currentTime / 0.4f;
             if (isSpread) transform.localScale = Vector3.Lerp(startScale, endScale, 1 - Mathf.Pow(1 - percent, 3));
-            _mat.SetColor(_colorHash, Color.Lerp(Color.white, startColor, (percent - 0.5f) * 2));
+            _mat.SetColor(_colorHash, Color.Lerp(_color, startColor, (percent - 0.5f) * 2));
             yield return null;
         }
 
         FinishFeedback();
     }
 
-    public void StartFeedback(bool value = true)
+    public void StartFeedback(Vector3 endScale, bool value = true)
     {
-        StartCoroutine(DOColorAndDoScaleCoroutine(value));
+        StartCoroutine(DOColorAndDoScaleCoroutine(endScale, value));
     }
 
     public void FinishFeedback()

@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 using Random = UnityEngine.Random;
@@ -14,6 +15,8 @@ public class CircleController : MonoBehaviour
     private float _currentTime;
 
     public UnityEvent<float, Action> OnRingChecked;
+
+    [SerializeField] private bool HackOn = false;
     
     private void Awake()
     {
@@ -25,7 +28,10 @@ public class CircleController : MonoBehaviour
     {
         ScalingCircle();
         CheckCircle();
-        GameManager.Instance.Difficulty += Time.deltaTime;
+        GameManager.Instance.Difficulty += Time.deltaTime / 2;
+        
+        if (HackOn && _isRedRing == false) transform.localScale = Vector3.MoveTowards(transform.localScale, new Vector3(_ringScale, _ringScale, 1),
+            10 * Time.deltaTime);
     }
 
     private void ScalingCircle()
@@ -61,16 +67,25 @@ public class CircleController : MonoBehaviour
             _currentTime += Time.deltaTime;
             if (_currentTime > 0.1f)
             {
+                GameManager.Instance.Difficulty -= 0.15f; 
                 UIManager.Instance.AddScore();
+                PlayRippleEffect(new Vector3(_ringScale, _ringScale, 1));
                 NewRing();
             }
             else if (_isRedRing)
             {
-                GameManager.Instance.Difficulty += 10;
+                GameManager.Instance.Difficulty += 7.5f;
                 NewRing();
             }
         }
         else _currentTime = 0;
+    }
+    
+    private void PlayRippleEffect(Vector3 scale)
+    {
+        RippleEffect effect = PoolManager.Instance.Pop("RippleEffect") as RippleEffect;
+        effect.transform.localScale = scale;
+        effect.StartFeedback(scale + new Vector3(0.5f, 0.5f));
     }
 
     private void NewRing()
