@@ -8,33 +8,56 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private PoolingListSO _poolListSO;
 
-    public UnityEvent OnGameOver; 
-    [field:SerializeField] public float Difficulty { get; set; }
+    public UnityEvent OnGameOver;
+    public float Difficulty { get; set; }
      
     private void Awake()
     {
         Instance ??= this;
         
         Application.targetFrameRate = 60;
-        CreatePoolManager();
         CreateDataManager();
         CreateUIManager();
-    }
-
-    private void CreateDataManager()
-    {
-        DataManager.Instance = new DataManager();
+        CreatePoolManager();
     }
 
     private void CreateUIManager()
     {
-        Transform canvasTrm = GameObject.Find("Canvas").transform;
-        UIManager.Instance = new UIManager(canvasTrm);
+        Transform canvasTrm = GameObject.Find("Canvas_Dynamic").transform;
+        GameObject uiManager = new GameObject("UIManager")
+        {
+            transform =
+            {
+                parent = transform
+            }
+        };
+        UIManager.Instance = uiManager.AddComponent<UIManager>();
+        UIManager.Instance.Init(canvasTrm);
+    }
+
+    private void CreateDataManager()
+    {
+        GameObject dataManager = new GameObject("DataManager")
+        {
+            transform =
+            {
+                parent = transform
+            }
+        };
+        DataManager.Instance = dataManager.AddComponent<DataManager>();
+        DataManager.Instance.Init();
     }
 
     private void CreatePoolManager()
     {
-        PoolManager.Instance = new PoolManager(transform);
+        GameObject poolManager = new GameObject("PoolManager")
+        {
+            transform =
+            {
+                parent = transform
+            }
+        };
+        PoolManager.Instance = poolManager.AddComponent<PoolManager>();
         foreach (PoolingPair pair in _poolListSO.Pairs)
         {
             PoolManager.Instance.CreatePool(pair.Prefab, pair.Count);
@@ -44,6 +67,10 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         OnGameOver?.Invoke();
-        DataManager.Instance.SaveGameData();
+    }
+
+    private void Update()
+    {
+        if (UIManager.Instance.Score > 0) Difficulty += Time.deltaTime * 1.25f; 
     }
 }

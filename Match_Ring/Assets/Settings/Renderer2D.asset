@@ -23,16 +23,16 @@ MonoBehaviour:
   m_HDREmulationScale: 1
   m_LightRenderTextureScale: 0.01
   m_LightBlendStyles:
-  - name: Multiply
+  - name: 
     maskTextureChannel: 0
     blendMode: 1
-  - name: Additive
+  - name: 
     maskTextureChannel: 0
     blendMode: 0
-  - name: Multiply with Mask
+  - name: 
     maskTextureChannel: 1
     blendMode: 1
-  - name: Additive with Mask
+  - name: 
     maskTextureChannel: 1
     blendMode: 0
   m_UseDepthStencilBuffer: 0
